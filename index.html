@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour World Cup 2026 - Giấc Mơ Mỹ | Vietnam Travel</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Oswald (Strong), Lato (Clean), Yellowtail (Stylish) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Oswald:wght@400;500;600;700&family=Yellowtail&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#E63946',
+                            blue: '#1D3557',
+                            lightblue: '#457B9D',
+                            light: '#F1FAEE',
+                            gold: '#FFD700'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Lato', 'sans-serif'],      // Body text - Dễ đọc
+                        heading: ['Oswald', 'sans-serif'], // Tiêu đề - Mạnh mẽ kiểu Mỹ
+                        script: ['Yellowtail', 'cursive'], // Điểm nhấn - Phóng khoáng
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Oswald', sans-serif;
+            letter-spacing: 0.5px;
+            /* Giãn chữ nhẹ cho tiêu đề thoáng hơn */
+        }
+
+        .script-font {
+            font-family: 'Yellowtail', cursive;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #1D3557;
+            border-radius: 4px;
+        }
+
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Loading & Toast Animation */
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .toast-enter {
+            animation: slideIn 0.5s ease-out forwards;
+        }
+
+        /* FAQ Accordion */
+        details>summary {
+            list-style: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details[open] summary~* {
+            animation: slideDown 0.3s ease-in-out;
+        }
+
+        @keyframes slideDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Video Background Utilities */
+        .video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .video-iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100vw;
+            height: 56.25vw;
+            /* 16:9 Aspect Ratio */
+            min-height: 100vh;
+            min-width: 177.77vh;
+            /* 16:9 Aspect Ratio */
+            pointer-events: none;
+            object-fit: cover;
+            /* Ensures video covers entire area on all devices */
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-md transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-earth-americas text-4xl text-brand-blue"></i>
+                <div class="flex flex-col">
+                    <span
+                        class="text-2xl font-bold text-brand-blue leading-none font-heading uppercase tracking-wide">WC2026</span>
+                    <span class="text-xl text-brand-red font-script transform -rotate-3 mt-[-5px]">Usa Tour</span>
+                </div>
+            </div>
+
+            <div
+                class="hidden md:flex items-center space-x-8 text-sm uppercase tracking-wider font-heading font-medium">
+                <a href="#itinerary" class="hover:text-brand-red transition relative group">
+                    Lịch Trình
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-red transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#tips" class="hover:text-brand-red transition relative group">
+                    Lưu Ý
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-red transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#culture" class="hover:text-brand-red transition relative group">
+                    Văn Hóa
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-red transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#destinations" class="hover:text-brand-red transition relative group">
+                    Điểm Đến
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-red transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#pricing" class="hover:text-brand-red transition relative group">
+                    Bảng Giá
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-red transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#contact"
+                    class="px-6 py-2 bg-brand-red text-white font-bold hover:bg-red-700 transition shadow-lg transform hover:scale-105 skew-x-[-10deg]">
+                    <span class="skew-x-[10deg] inline-block">ĐẶT NGAY</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-brand-blue focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t font-heading uppercase">
+            <div class="flex flex-col px-6 py-4 space-y-4">
+                <a href="#itinerary" class="font-medium hover:text-brand-red">Lịch Trình</a>
+                <a href="#tips" class="font-medium hover:text-brand-red">Lưu Ý Cần Biết</a>
+                <a href="#culture" class="font-medium hover:text-brand-red">Văn Hóa Mỹ</a>
+                <a href="#pricing" class="font-medium hover:text-brand-red">Bảng Giá</a>
+                <a href="#contact" class="text-center px-6 py-3 bg-brand-red text-white font-bold">Đặt Chỗ Ngay</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Youtube Background -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden px-4 pt-20">
+
+        <!-- Video Background Container -->
+        <div class="video-container">
+            <video class="video-iframe" autoplay muted loop playsinline preload="metadata">
+                <source src="wc_los.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <!-- Overlay darkened for better font contrast -->
+            <div
+                class="absolute inset-0 bg-brand-blue/60 z-0 bg-gradient-to-b from-brand-blue/80 via-transparent to-brand-blue/90">
+            </div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="text-center text-white max-w-6xl mx-auto animate-fade-in-up relative z-10">
+            <div class="inline-block mb-6">
+                <span
+                    class="bg-brand-red/90 backdrop-blur px-6 py-2 text-base md:text-lg font-bold font-heading uppercase tracking-widest shadow-lg border-l-4 border-brand-gold">
+                    <i class="fa-solid fa-clock mr-2"></i> Lịch trình: 10 Ngày 9 Đêm
+                </span>
+            </div>
+
+            <h1
+                class="text-5xl md:text-7xl lg:text-9xl font-heading font-bold mb-2 leading-none text-shadow uppercase tracking-tighter">
+                World Cup <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">2026</span>
+            </h1>
+            <p class="font-script text-4xl md:text-6xl text-brand-gold mb-8 transform -rotate-2 text-shadow">
+                Hành trình giấc mơ Mỹ
+            </p>
+
+            <!-- Countdown Timer -->
+            <div class="flex flex-wrap justify-center gap-4 md:gap-8 my-10 text-center font-heading">
+                <div class="bg-black/40 backdrop-blur-sm p-4 w-24 md:w-32 border-t-4 border-brand-gold">
+                    <div id="days" class="text-4xl md:text-6xl font-bold text-white">00</div>
+                    <div class="text-xs uppercase tracking-widest mt-1 text-gray-300">Ngày</div>
+                </div>
+                <div class="bg-black/40 backdrop-blur-sm p-4 w-24 md:w-32 border-t-4 border-brand-red">
+                    <div id="hours" class="text-4xl md:text-6xl font-bold text-white">00</div>
+                    <div class="text-xs uppercase tracking-widest mt-1 text-gray-300">Giờ</div>
+                </div>
+                <div class="bg-black/40 backdrop-blur-sm p-4 w-24 md:w-32 border-t-4 border-brand-red">
+                    <div id="minutes" class="text-4xl md:text-6xl font-bold text-white">00</div>
+                    <div class="text-xs uppercase tracking-widest mt-1 text-gray-300">Phút</div>
+                </div>
+                <div class="bg-black/40 backdrop-blur-sm p-4 w-24 md:w-32 border-t-4 border-brand-red">
+                    <div id="seconds" class="text-4xl md:text-6xl font-bold text-brand-gold">00</div>
+                    <div class="text-xs uppercase tracking-widest mt-1 text-gray-300">Giây</div>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-6 justify-center">
+                <a href="#contact"
+                    class="group relative px-8 py-4 bg-brand-red text-white text-xl font-heading font-bold uppercase tracking-wider overflow-hidden shadow-2xl skew-x-[-10deg]">
+                    <div
+                        class="absolute inset-0 w-full h-full bg-red-700 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300">
+                    </div>
+                    <span class="relative skew-x-[10deg] inline-block flex items-center gap-3">
+                        <i class="fa-solid fa-paper-plane"></i> Đăng Ký Visa Ngay
+                    </span>
+                </a>
+                <a href="#itinerary"
+                    class="group relative px-8 py-4 bg-transparent border-2 border-white text-white text-xl font-heading font-bold uppercase tracking-wider overflow-hidden hover:text-brand-blue skew-x-[-10deg]">
+                    <div
+                        class="absolute inset-0 w-full h-full bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300">
+                    </div>
+                    <span class="relative skew-x-[10deg] inline-block flex items-center gap-3">
+                        <i class="fa-solid fa-calendar-check"></i> Xem Lịch Trình
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Down Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
+            <a href="#itinerary" class="text-white text-3xl"><i class="fa-solid fa-angles-down"></i></a>
+        </div>
+    </section>
+
+    <!-- Stats / Trust Bar -->
+    <div class="bg-brand-blue text-white py-10 relative z-10 -mt-2 shadow-2xl border-t-4 border-brand-gold">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-white/10 font-heading">
+                <div>
+                    <div class="text-4xl md:text-5xl font-bold text-brand-gold">100%</div>
+                    <div class="text-sm md:text-lg uppercase tracking-wide text-gray-300 mt-2">Vé Trận Đấu</div>
+                </div>
+                <div>
+                    <div class="text-4xl md:text-5xl font-bold text-brand-gold">98%</div>
+                    <div class="text-sm md:text-lg uppercase tracking-wide text-gray-300 mt-2">Đậu Visa Mỹ</div>
+                </div>
+                <div>
+                    <div class="text-4xl md:text-5xl font-bold text-brand-gold">10N9Đ</div>
+                    <div class="text-sm md:text-lg uppercase tracking-wide text-gray-300 mt-2">Hành Trình</div>
+                </div>
+                <div>
+                    <div class="text-4xl md:text-5xl font-bold text-brand-gold">24/7</div>
+                    <div class="text-sm md:text-lg uppercase tracking-wide text-gray-300 mt-2">Hỗ Trợ Tiếng Việt</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Itinerary Preview -->
+    <section id="itinerary" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="font-script text-3xl text-brand-red transform -rotate-2 inline-block mb-2">Điểm nhấn hành
+                    trình</span>
+                <h2 class="text-brand-blue text-5xl md:text-6xl font-heading font-bold uppercase tracking-tight">Lịch
+                    Trình 10 Ngày 9 Đêm</h2>
+                <div class="w-24 h-1 bg-brand-gold mx-auto mt-4"></div>
+            </div>
+
+            <div class="max-w-5xl mx-auto relative">
+                <!-- Connecting Line -->
+                <div class="hidden md:block absolute left-[8.5rem] top-8 bottom-8 w-0.5 bg-gray-200 dashed-line"></div>
+
+                <div class="space-y-10">
+                    <!-- Day 1 -->
+                    <div class="relative flex flex-col md:flex-row gap-8 group">
+                        <div
+                            class="flex-shrink-0 w-full md:w-32 bg-brand-blue rounded-none flex flex-col items-center justify-center p-4 text-white shadow-lg z-10 h-24 md:h-auto font-heading skew-x-[-6deg]">
+                            <span class="font-bold text-4xl skew-x-[6deg]">01</span>
+                            <span class="text-xs uppercase tracking-widest skew-x-[6deg]">Ngày</span>
+                        </div>
+                        <div
+                            class="flex-grow bg-white border-l-4 border-brand-blue p-8 shadow-sm hover:shadow-2xl transition duration-300 group-hover:bg-gray-50">
+                            <h4 class="text-2xl font-heading font-bold text-brand-blue mb-2 uppercase"><i
+                                    class="fa-solid fa-plane-departure mr-3 text-brand-red"></i> TP.HCM - New York</h4>
+                            <p class="text-gray-600 mb-2 leading-relaxed text-lg">Tập trung tại sân bay Tân Sơn Nhất.
+                                Bay hãng hàng không 5 sao (Qatar/Emirates/ANA). Nghỉ đêm trên máy bay.</p>
+                            <div class="text-sm text-gray-500 font-bold uppercase tracking-wide mt-4"><i
+                                    class="fa-solid fa-bed mr-2"></i> Nghỉ đêm: Trên máy bay</div>
+                        </div>
+                    </div>
+
+                    <!-- Day 2 -->
+                    <div class="relative flex flex-col md:flex-row gap-8 group">
+                        <div
+                            class="flex-shrink-0 w-full md:w-32 bg-brand-red rounded-none flex flex-col items-center justify-center p-4 text-white shadow-2xl z-10 h-24 md:h-auto transform md:scale-110 font-heading skew-x-[-6deg] border-4 border-white">
+                            <span class="font-bold text-4xl skew-x-[6deg]">02</span>
+                            <span class="text-xs font-bold uppercase text-brand-gold skew-x-[6deg]">Match Day</span>
+                        </div>
+                        <div
+                            class="flex-grow bg-white border-2 border-brand-red/20 p-8 shadow-xl transition relative overflow-hidden group-hover:-translate-y-2 duration-300">
+                            <div
+                                class="absolute top-0 right-0 bg-brand-red text-white text-xs px-4 py-2 font-heading font-bold uppercase tracking-widest">
+                                Sự kiện chính</div>
+                            <h4
+                                class="text-2xl font-heading font-bold text-brand-red mb-2 uppercase flex items-center gap-3">
+                                <i class="fa-solid fa-futbol text-3xl"></i> Xem Trận Đấu Vòng Bảng
+                            </h4>
+                            <p class="text-gray-600 mb-4 leading-relaxed text-lg">Sáng: Tham quan <strong>Tượng Nữ Thần
+                                    Tự Do</strong>, Phố Wall.<br>Chiều: Di chuyển đến SVĐ MetLife. Hòa mình vào không
+                                khí Fan Fest sôi động.</p>
+                            <div class="p-4 bg-brand-light border-l-4 border-brand-gold rounded-r-lg">
+                                <p class="font-bold text-brand-blue font-heading uppercase text-lg">19:00: KICK-OFF -
+                                    Thưởng thức trận đấu đỉnh cao.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 3 -->
+                    <div class="relative flex flex-col md:flex-row gap-8 group">
+                        <div
+                            class="flex-shrink-0 w-full md:w-32 bg-brand-blue rounded-none flex flex-col items-center justify-center p-4 text-white shadow-lg z-10 h-24 md:h-auto font-heading skew-x-[-6deg]">
+                            <span class="font-bold text-4xl skew-x-[6deg]">03</span>
+                            <span class="text-xs uppercase tracking-widest skew-x-[6deg]">Ngày</span>
+                        </div>
+                        <div
+                            class="flex-grow bg-white border-l-4 border-brand-blue p-8 shadow-sm hover:shadow-2xl transition duration-300 group-hover:bg-gray-50">
+                            <h4 class="text-2xl font-heading font-bold text-brand-blue mb-2 uppercase"><i
+                                    class="fa-solid fa-city mr-3 text-brand-red"></i> New York City Tour</h4>
+                            <p class="text-gray-600 mb-2 leading-relaxed text-lg">Check-in Quảng trường Thời Đại, Trung
+                                tâm Rockefeller, Empire State Building. Mua sắm tại Fifth Avenue.</p>
+                            <div class="text-sm text-gray-500 font-bold uppercase tracking-wide mt-4"><i
+                                    class="fa-solid fa-bed mr-2"></i> Nghỉ đêm: New York</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center pt-10">
+                    <button
+                        class="px-10 py-3 border-2 border-brand-blue text-brand-blue font-heading font-bold uppercase tracking-widest hover:bg-brand-blue hover:text-white transition text-lg">Xem
+                        lịch trình chi tiết</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips Section -->
+    <section id="tips" class="py-24 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-brand-blue text-4xl md:text-5xl font-heading font-bold uppercase mb-4">Thông Tin Hữu Ích
+                </h2>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto text-lg">Kinh nghiệm "xương máu" để chuyến đi Mỹ của bạn
+                    an toàn và thuận lợi.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Tip Card Style -->
+                <div
+                    class="bg-white p-8 shadow-sm hover:shadow-xl transition duration-300 border-b-4 border-brand-red group">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="text-4xl text-brand-red group-hover:scale-110 transition duration-300">
+                            <i class="fa-solid fa-passport"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-2xl uppercase tracking-wide text-brand-blue">Visa Mỹ</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">Đây là bước quan trọng nhất. Hãy khai báo trung thực. Nếu
+                        đã từng rớt Visa, hãy báo ngay cho chúng tôi để có phương án xử lý hồ sơ đặc biệt.</p>
+                </div>
+
+                <div
+                    class="bg-white p-8 shadow-sm hover:shadow-xl transition duration-300 border-b-4 border-green-500 group">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="text-4xl text-green-500 group-hover:scale-110 transition duration-300">
+                            <i class="fa-solid fa-briefcase-medical"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-2xl uppercase tracking-wide text-brand-blue">Thuốc & Y Tế
+                        </h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">Thuốc ở Mỹ cần đơn bác sĩ và rất đắt. Hãy mang theo thuốc
+                        cảm, tiêu hóa, và các loại thuốc đặc trị cá nhân từ Việt Nam.</p>
+                </div>
+
+                <div
+                    class="bg-white p-8 shadow-sm hover:shadow-xl transition duration-300 border-b-4 border-brand-gold group">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="text-4xl text-brand-gold group-hover:scale-110 transition duration-300">
+                            <i class="fa-solid fa-user-shield"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-2xl uppercase tracking-wide text-brand-blue">An Ninh</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">Cẩn thận móc túi tại Times Square. Không mang quá nhiều
+                        tiền mặt ($5000+). Luôn giữ hộ chiếu trong két sắt khách sạn.</p>
+                </div>
+
+                <div
+                    class="bg-white p-8 shadow-sm hover:shadow-xl transition duration-300 border-b-4 border-blue-400 group">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="text-4xl text-blue-400 group-hover:scale-110 transition duration-300">
+                            <i class="fa-solid fa-restroom"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-2xl uppercase tracking-wide text-brand-blue">WC Công Cộng
+                        </h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">Rất khó tìm WC miễn phí ở NY. Mẹo: Hãy vào các tiệm
+                        Starbucks, McDonalds hoặc sảnh khách sạn lớn.</p>
+                </div>
+                <div
+                    class="bg-white p-8 shadow-sm hover:shadow-xl transition duration-300 border-b-4 border-purple-500 group">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="text-4xl text-purple-500 group-hover:scale-110 transition duration-300">
+                            <i class="fa-solid fa-taxi"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-2xl uppercase tracking-wide text-brand-blue">Di Chuyển
+                        </h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">Nên dùng Uber/Lyft vì biết trước giá. Tàu điện ngầm
+                        (Subway) rẻ & nhanh nhưng khá phức tạp, cần chú ý hướng dẫn viên.</p>
+                </div>
+                <div
+                    class="bg-white p-8 shadow-sm hover:shadow-xl transition duration-300 border-b-4 border-indigo-500 group">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="text-4xl text-indigo-500 group-hover:scale-110 transition duration-300">
+                            <i class="fa-solid fa-wifi"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-2xl uppercase tracking-wide text-brand-blue">Sim &
+                            Internet</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">Wifi miễn phí có ở nhiều nơi nhưng không ổn định. Chúng tôi
+                        tặng Sim 4G trong tour để bạn luôn giữ kết nối.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Culture Section -->
+    <section id="culture" class="py-24 bg-white overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2 relative">
+                    <div
+                        class="absolute inset-0 border-4 border-brand-red transform translate-x-4 translate-y-4 rounded-none z-0">
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="American Culture Dining"
+                        class="relative z-10 shadow-2xl grayscale hover:grayscale-0 transition duration-500 w-full object-cover h-[500px]">
+                </div>
+                <div class="md:w-1/2">
+                    <span class="font-script text-3xl text-brand-red block mb-2">Nhập gia tùy tục</span>
+                    <h2
+                        class="text-5xl md:text-6xl font-heading font-bold text-brand-blue mb-8 uppercase leading-tight">
+                        Văn Hóa Mỹ <br>Những Điều Khác Biệt</h2>
+
+                    <div class="space-y-8">
+                        <div class="flex gap-6 items-start">
+                            <span class="font-heading text-4xl font-bold text-brand-light stroke-text text-transparent"
+                                style="-webkit-text-stroke: 1px #1D3557;">01</span>
+                            <div>
+                                <h4 class="font-heading font-bold text-xl text-brand-blue uppercase mb-1">Văn hóa Tiền
+                                    Tip (Tipping)</h4>
+                                <p class="text-gray-600 text-base">Bắt buộc 15-20% hóa đơn. Đừng quên tip cho phục vụ,
+                                    taxi, bellman.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start">
+                            <span class="font-heading text-4xl font-bold text-brand-light stroke-text text-transparent"
+                                style="-webkit-text-stroke: 1px #1D3557;">02</span>
+                            <div>
+                                <h4 class="font-heading font-bold text-xl text-brand-blue uppercase mb-1">Khẩu phần ăn
+                                    khổng lồ</h4>
+                                <p class="text-gray-600 text-base">Một phần ăn rất lớn. Việc xin hộp mang về (to-go box)
+                                    là văn minh và bình thường.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start">
+                            <span class="font-heading text-4xl font-bold text-brand-light stroke-text text-transparent"
+                                style="-webkit-text-stroke: 1px #1D3557;">03</span>
+                            <div>
+                                <h4 class="font-heading font-bold text-xl text-brand-blue uppercase mb-1">Văn hóa xếp
+                                    hàng</h4>
+                                <p class="text-gray-600 text-base">Tuyệt đối không chen ngang. Giữ khoảng cách cá nhân
+                                    (personal space) khi xếp hàng.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Destinations -->
+    <section id="destinations" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-brand-blue text-3xl md:text-4xl font-bold mb-2">Điểm Đến & Sân Vận Động</h2>
+                    <p class="text-gray-600">Những thành phố đăng cai sôi động nhất nước Mỹ</p>
+                </div>
+                <div class="hidden md:flex gap-2">
+                    <button
+                        class="w-10 h-10 rounded-full bg-white shadow hover:bg-brand-red hover:text-white transition flex items-center justify-center"><i
+                            class="fa-solid fa-arrow-left"></i></button>
+                    <button
+                        class="w-10 h-10 rounded-full bg-white shadow hover:bg-brand-red hover:text-white transition flex items-center justify-center"><i
+                            class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-96">
+                    <img src="https://i.pinimg.com/736x/4b/cf/d5/4bcfd51828316c26bc6b978c20e34fc3.jpg" alt="New York"
+                        class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-6">
+                        <h3 class="text-white text-2xl font-bold mb-1">New York / New Jersey</h3>
+                        <p class="text-gray-300 text-sm mb-2"><i
+                                class="fa-solid fa-location-dot text-brand-red mr-1"></i> Sân MetLife</p>
+                        <p
+                            class="text-white text-sm opacity-0 group-hover:opacity-100 transition duration-300 transform translate-y-4 group-hover:translate-y-0">
+                            Nơi dự kiến diễn ra trận chung kết kịch tính nhất lịch sử.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-96">
+                    <img src="https://i.pinimg.com/1200x/29/a9/ba/29a9baeabbfc9a1008834a70a1b8809e.jpg"
+                        alt="Los Angeles"
+                        class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-6">
+                        <h3 class="text-white text-2xl font-bold mb-1">Los Angeles</h3>
+                        <p class="text-gray-300 text-sm mb-2"><i
+                                class="fa-solid fa-location-dot text-brand-red mr-1"></i> Sân SoFi</p>
+                        <p
+                            class="text-white text-sm opacity-0 group-hover:opacity-100 transition duration-300 transform translate-y-4 group-hover:translate-y-0">
+                            Kinh đô điện ảnh và sân vận động hiện đại nhất thế giới.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-96">
+                    <img src="https://i.pinimg.com/736x/dc/fa/0c/dcfa0c83229b9c4ef45d59e943027b66.jpg" alt="Miami"
+                        class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-6">
+                        <h3 class="text-white text-2xl font-bold mb-1">Miami</h3>
+                        <p class="text-gray-300 text-sm mb-2"><i
+                                class="fa-solid fa-location-dot text-brand-red mr-1"></i> Sân Hard Rock</p>
+                        <p
+                            class="text-white text-sm opacity-0 group-hover:opacity-100 transition duration-300 transform translate-y-4 group-hover:translate-y-0">
+                            Thành phố biển sôi động, văn hóa Latin và những bữa tiệc bất tận.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing"
+        class="py-24 bg-brand-blue text-white bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl md:text-6xl font-heading font-bold uppercase mb-4">Các Gói Tour</h2>
+                <p class="text-blue-200 font-script text-3xl">Đặt sớm ưu đãi lớn</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Standard -->
+                <div class="bg-white text-gray-800 p-8 relative hover:scale-105 transition duration-300 flex flex-col">
+                    <h3 class="text-2xl font-heading font-bold text-gray-500 uppercase tracking-widest mb-4">Gói Cơ Bản
+                    </h3>
+                    <div class="text-5xl font-heading font-bold text-brand-blue mb-2">99Tr <span
+                            class="text-lg text-gray-400 font-normal">/khách</span></div>
+                    <div class="w-full h-px bg-gray-200 my-6"></div>
+                    <ul class="space-y-4 mb-8 flex-grow text-sm font-medium">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> Khách sạn
+                            3-4 sao</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> 1 Vé xem
+                            trận đấu (CAT 3)</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> Xe đưa đón
+                            theo đoàn</li>
+                    </ul>
+                    <a href="#contact" onclick="selectPackage('Cơ Bản')"
+                        class="block w-full py-3 border-2 border-brand-blue text-brand-blue font-heading font-bold uppercase tracking-widest text-center hover:bg-brand-blue hover:text-white transition">Chọn
+                        Gói</a>
+                </div>
+
+                <!-- Premium (Highlighted) -->
+                <div
+                    class="bg-white text-gray-800 p-8 relative transform md:-translate-y-6 shadow-2xl border-t-8 border-brand-red flex flex-col">
+                    <div
+                        class="absolute top-0 right-0 bg-brand-red text-white text-xs font-heading font-bold px-3 py-1 uppercase">
+                        Best Seller</div>
+                    <h3 class="text-3xl font-heading font-bold text-brand-red uppercase tracking-widest mb-4">Phổ Thông
+                    </h3>
+                    <div class="text-6xl font-heading font-bold text-brand-blue mb-2">169Tr</div>
+                    <p class="text-gray-500 mb-6 font-bold uppercase text-xs tracking-widest">Trọn gói (All-inclusive)
+                    </p>
+                    <div class="w-full h-px bg-gray-200 my-6"></div>
+                    <ul class="space-y-4 mb-8 flex-grow font-medium">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-red"></i> <strong>Vé
+                                máy bay khứ hồi</strong></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-red"></i> Khách sạn 4
+                            sao trung tâm</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-red"></i> <strong>1
+                                Vé trận đấu (CAT 2)</strong></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-red"></i> Bao đậu
+                            Visa</li>
+                    </ul>
+                    <a href="#contact" onclick="selectPackage('Phổ Thông')"
+                        class="block w-full py-4 bg-brand-red text-white font-heading font-bold uppercase tracking-widest text-center hover:bg-red-800 transition shadow-lg">Đăng
+                        Ký Ngay</a>
+                </div>
+
+                <!-- VIP -->
+                <div
+                    class="bg-gray-900 text-white p-8 relative hover:scale-105 transition duration-300 flex flex-col border border-gray-700">
+                    <h3 class="text-2xl font-heading font-bold text-brand-gold uppercase tracking-widest mb-4">Gói V.I.P
+                    </h3>
+                    <div class="text-5xl font-heading font-bold text-white mb-2">250Tr+</div>
+                    <div class="w-full h-px bg-gray-700 my-6"></div>
+                    <ul class="space-y-4 mb-8 flex-grow text-sm font-medium text-gray-300">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-star text-brand-gold"></i> Bay Thương
+                            Gia</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-star text-brand-gold"></i> Khách sạn 5
+                            sao</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-star text-brand-gold"></i> <strong>Vé
+                                VIP Hospitality</strong></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-star text-brand-gold"></i> Xe riêng
+                            đưa đón</li>
+                    </ul>
+                    <a href="#contact" onclick="selectPackage('VIP')"
+                        class="block w-full py-3 border-2 border-brand-gold text-brand-gold font-heading font-bold uppercase tracking-widest text-center hover:bg-brand-gold hover:text-black transition">Liên
+                        Hệ Riêng</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="text-center mb-16">
+                <h2 class="text-brand-blue text-4xl md:text-5xl font-heading font-bold uppercase mb-4">Hỏi Đáp (FAQ)
+                </h2>
+            </div>
+
+            <div class="space-y-4">
+                <details
+                    class="bg-white p-6 border-l-4 border-gray-300 cursor-pointer group hover:border-brand-blue transition duration-300">
+                    <summary
+                        class="flex justify-between items-center font-heading font-bold text-xl text-gray-800 uppercase">
+                        <span>Giá tour đã bao gồm vé máy bay chưa?</span>
+                        <span class="transition group-open:rotate-180"><i
+                                class="fa-solid fa-chevron-down text-brand-red"></i></span>
+                    </summary>
+                    <div class="mt-4 text-gray-600 leading-relaxed pt-2">
+                        Với <strong>Gói Phổ Thông</strong> và <strong>VIP</strong>, giá tour đã bao gồm vé máy bay khứ
+                        hồi. Gói Cơ Bản chưa bao gồm vé máy bay.
+                    </div>
+                </details>
+
+                <details
+                    class="bg-white p-6 border-l-4 border-gray-300 cursor-pointer group hover:border-brand-blue transition duration-300">
+                    <summary
+                        class="flex justify-between items-center font-heading font-bold text-xl text-gray-800 uppercase">
+                        <span>Nếu tôi bị trượt Visa Mỹ thì sao?</span>
+                        <span class="transition group-open:rotate-180"><i
+                                class="fa-solid fa-chevron-down text-brand-red"></i></span>
+                    </summary>
+                    <div class="mt-4 text-gray-600 leading-relaxed pt-2">
+                        Nếu rớt hoàn toàn, chúng tôi sẽ hoàn lại tiền cọc tour (trừ phí phỏng vấn Lãnh sự quán và phí
+                        dịch vụ hồ sơ 3.000.000đ).
+                    </div>
+                </details>
+
+                <details
+                    class="bg-white p-6 border-l-4 border-gray-300 cursor-pointer group hover:border-brand-blue transition duration-300">
+                    <summary
+                        class="flex justify-between items-center font-heading font-bold text-xl text-gray-800 uppercase">
+                        <span>Trận đấu tôi xem là trận nào?</span>
+                        <span class="transition group-open:rotate-180"><i
+                                class="fa-solid fa-chevron-down text-brand-red"></i></span>
+                    </summary>
+                    <div class="mt-4 text-gray-600 leading-relaxed pt-2">
+                        Tour cam kết vé xem các trận vòng bảng tại New York/New Jersey. Cặp đấu chính thức sẽ được cập
+                        nhật sau lễ bốc thăm của FIFA (12/2025).
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="py-24 bg-white relative">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="bg-white shadow-2xl max-w-5xl mx-auto flex flex-col md:flex-row border-t-8 border-brand-blue">
+                <!-- Image Side -->
+                <div
+                    class="md:w-1/2 bg-brand-blue p-12 flex flex-col justify-center text-white relative overflow-hidden">
+                    <div
+                        class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
+                    </div>
+                    <div class="relative z-10">
+                        <span class="font-script text-3xl text-brand-gold mb-2 block">Cơ hội cuối cùng</span>
+                        <h3 class="text-4xl font-heading font-bold mb-6 uppercase leading-tight">Đăng Ký Ngay <br>Giữ
+                            Chỗ Đẹp</h3>
+                        <div class="space-y-6 text-lg">
+                            <p class="flex items-center gap-4"><i
+                                    class="fa-solid fa-phone w-8 h-8 rounded-full bg-white text-brand-blue flex items-center justify-center"></i>
+                                1900 123 456</p>
+                            <p class="flex items-center gap-4"><i
+                                    class="fa-solid fa-envelope w-8 h-8 rounded-full bg-white text-brand-blue flex items-center justify-center"></i>
+                                sales@capellatravel.com</p>
+                            <p class="flex items-center gap-4"><i
+                                    class="fa-solid fa-location-dot w-8 h-8 rounded-full bg-white text-brand-blue flex items-center justify-center"></i>
+                                Q1, TP. Hồ Chí Minh</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Side -->
+                <div class="md:w-1/2 p-10">
+                    <h2 class="text-3xl font-heading font-bold text-gray-800 mb-8 uppercase">Thông Tin Của Bạn</h2>
+                    <form id="leadForm" class="space-y-6" onsubmit="handleFormSubmit(event)">
+                        <div class="group">
+                            <label
+                                class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1 group-focus-within:text-brand-red transition">Họ
+                                và tên</label>
+                            <input type="text" required
+                                class="w-full px-0 py-3 border-b-2 border-gray-300 focus:border-brand-red outline-none transition bg-transparent text-lg font-medium placeholder-gray-300"
+                                placeholder="NGUYEN VAN A">
+                        </div>
+                        <div class="group">
+                            <label
+                                class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1 group-focus-within:text-brand-red transition">Số
+                                điện thoại</label>
+                            <input type="tel" required
+                                class="w-full px-0 py-3 border-b-2 border-gray-300 focus:border-brand-red outline-none transition bg-transparent text-lg font-medium placeholder-gray-300"
+                                placeholder="0909 XXX XXX">
+                        </div>
+                        <div class="group">
+                            <label
+                                class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1 group-focus-within:text-brand-red transition">Email</label>
+                            <input type="email"
+                                class="w-full px-0 py-3 border-b-2 border-gray-300 focus:border-brand-red outline-none transition bg-transparent text-lg font-medium placeholder-gray-300"
+                                placeholder="EMAIL@EXAMPLE.COM">
+                        </div>
+                        <div class="group">
+                            <label
+                                class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1 group-focus-within:text-brand-red transition">Gói
+                                quan tâm</label>
+                            <select id="packageSelect"
+                                class="w-full px-0 py-3 border-b-2 border-gray-300 focus:border-brand-red outline-none transition bg-transparent text-lg font-medium">
+                                <option value="Chưa chọn">-- CHỌN GÓI --</option>
+                                <option value="Cơ Bản">GÓI CƠ BẢN</option>
+                                <option value="Phổ Thông">GÓI PHỔ THÔNG</option>
+                                <option value="VIP">GÓI VIP</option>
+                            </select>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-brand-blue text-white font-heading font-bold uppercase tracking-widest py-4 hover:bg-brand-red transition duration-300 shadow-lg mt-4">
+                            Gửi Yêu Cầu
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-20 pb-10 border-t-4 border-brand-red">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="fa-solid fa-earth-americas text-3xl text-brand-red"></i>
+                        <span class="text-2xl font-heading font-bold uppercase">Capella Travel</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">Đối tác tin cậy cho những hành trình thể thao đẳng
+                        cấp thế giới.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-heading font-bold uppercase mb-6 tracking-wider text-brand-gold">Liên Kết
+                    </h4>
+                    <ul class="space-y-3 text-gray-400 text-sm font-medium">
+                        <li><a href="#" class="hover:text-white transition uppercase">Về chúng tôi</a></li>
+                        <li><a href="#tips" class="hover:text-white transition uppercase">Lưu ý</a></li>
+                        <li><a href="#faq" class="hover:text-white transition uppercase">Hỏi đáp</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-heading font-bold uppercase mb-6 tracking-wider text-brand-gold">Host Cities
+                    </h4>
+                    <ul class="space-y-3 text-gray-400 text-sm font-medium">
+                        <li><a href="#" class="hover:text-white transition uppercase">New York</a></li>
+                        <li><a href="#" class="hover:text-white transition uppercase">Los Angeles</a></li>
+                        <li><a href="#" class="hover:text-white transition uppercase">Miami</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-heading font-bold uppercase mb-6 tracking-wider text-brand-gold">Social</h4>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-12 h-12 border border-gray-700 flex items-center justify-center hover:bg-brand-blue hover:border-brand-blue transition"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"
+                            class="w-12 h-12 border border-gray-700 flex items-center justify-center hover:bg-brand-red hover:border-brand-red transition"><i
+                                class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-xs uppercase tracking-widest">
+                &copy; 2025 Capella Travel. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast"
+        class="fixed top-24 right-5 bg-white border-l-4 border-green-500 text-gray-800 px-6 py-4 shadow-2xl hidden z-50 flex items-center gap-4">
+        <i class="fa-solid fa-circle-check text-green-500 text-2xl"></i>
+        <div>
+            <h4 class="font-heading font-bold text-lg uppercase">Đã nhận thông tin!</h4>
+            <p class="text-sm text-gray-500">Chúng tôi sẽ liên hệ trong 24h.</p>
+        </div>
+        <button onclick="closeToast()" class="text-gray-400 hover:text-gray-600 ml-2"><i
+                class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <script>
+        // Countdown Timer Logic
+        const targetDate = new Date("June 11, 2026 00:00:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance < 0) {
+                document.getElementById("countdown").innerHTML = "WORLD CUP 2026 ĐÃ BẮT ĐẦU!";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Add leading zeros
+            document.getElementById("days").innerText = days < 10 ? "0" + days : days;
+            document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
+            document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+            document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Sticky Header Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.replace('py-3', 'py-2');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.replace('py-2', 'py-3');
+            }
+        });
+
+        function selectPackage(packageName) {
+            const select = document.getElementById('packageSelect');
+            select.value = packageName;
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const toast = document.getElementById('toast');
+            toast.classList.remove('hidden');
+            toast.classList.add('toast-enter');
+            document.getElementById('leadForm').reset();
+            setTimeout(() => { closeToast(); }, 5000);
+        }
+
+        function closeToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.add('hidden');
+        }
+    </script>
+</body>
+
+</html>
