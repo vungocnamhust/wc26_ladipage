@@ -444,7 +444,7 @@
                 </div>
 
                 <div class="text-center pt-10">
-                    <button
+                    <button id="showItineraryBtn"
                         class="px-10 py-3 border-2 border-brand-blue text-brand-blue font-heading font-bold uppercase tracking-widest hover:bg-brand-blue hover:text-white transition text-lg">Xem
                         lịch trình chi tiết</button>
                 </div>
@@ -986,6 +986,220 @@
         </div>
     </section>
 
+    <!-- Itinerary Modal -->
+    <div id="itineraryModal"
+        class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white max-w-5xl w-full max-h-[90vh] overflow-y-auto rounded-lg shadow-2xl">
+            <!-- Modal Header -->
+            <div class="sticky top-0 bg-brand-blue text-white p-6 flex justify-between items-center z-10">
+                <div>
+                    <h2 class="text-3xl font-heading font-bold uppercase">Lịch Trình Chi Tiết</h2>
+                    <p class="text-blue-200 mt-1">10 Ngày 9 Đêm - World Cup 2026</p>
+                </div>
+                <button id="closeModalBtn" class="text-white hover:text-brand-gold transition">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Modal Content -->
+            <div class="p-8 space-y-6">
+                <!-- Day 1 -->
+                <div class="border-l-4 border-brand-blue pl-6 py-4 bg-gray-50">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="bg-brand-blue text-white px-4 py-2 font-heading font-bold text-xl">NGÀY 1</span>
+                        <h3 class="text-2xl font-heading font-bold text-brand-blue">TP.HCM - New York</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700 leading-relaxed">
+                        <li>• <strong>Sáng:</strong> Tập trung tại sân bay Tân Sơn Nhất</li>
+                        <li>• <strong>Chiều:</strong> Khởi hành chuyến bay quốc tế hãng 5 sao (Qatar
+                            Airways/Emirates/ANA)</li>
+                        <li>• <strong>Tối:</strong> Nghỉ đêm trên máy bay</li>
+                    </ul>
+                    <p class="mt-3 text-sm text-gray-500 font-bold">🛏️ Nghỉ đêm: Trên máy bay</p>
+                </div>
+
+                <!-- Day 2 -->
+                <div class="border-l-4 border-brand-red pl-6 py-4 bg-red-50">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="bg-brand-red text-white px-4 py-2 font-heading font-bold text-xl">NGÀY 2</span>
+                        <h3 class="text-2xl font-heading font-bold text-brand-red">⚽ MATCH DAY - Xem Trận Đấu</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700 leading-relaxed">
+                        <li>• <strong>Sáng:</strong> Đến New York, nhận phòng khách sạn, nghỉ ngơi</li>
+                        <li>• <strong>10:00:</strong> Tham quan Tượng Nữ Thần Tự Do (Statue of Liberty)</li>
+                        <li>• <strong>12:00:</strong> Khám phá Phố Wall (Wall Street) và Quảng trường Thời Đại (Times
+                            Square)</li>
+                        <li>• <strong>15:00:</strong> Di chuyển đến SVĐ MetLife Stadium</li>
+                        <li>• <strong>17:00:</strong> Tham gia Fan Fest - Không khí lễ hội sôi động</li>
+                        <li>• <strong class="text-brand-red text-lg">19:00: KICK-OFF ⚽ Thưởng thức trận đấu vòng bảng
+                                đỉnh cao</strong></li>
+                        <li>• <strong>22:00:</strong> Trở về khách sạn</li>
+                    </ul>
+                    <p class="mt-3 text-sm text-gray-500 font-bold">🛏️ Nghỉ đêm: New York</p>
+                </div>
+
+                <!-- Day 3 -->
+                <div class="border-l-4 border-brand-blue pl-6 py-4 bg-gray-50">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="bg-brand-blue text-white px-4 py-2 font-heading font-bold text-xl">NGÀY 3</span>
+                        <h3 class="text-2xl font-heading font-bold text-brand-blue">New York City Tour</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700 leading-relaxed">
+                        <li>• <strong>Sáng:</strong> Tham quan Trung tâm Rockefeller (Rockefeller Center)</li>
+                        <li>• <strong>10:00:</strong> Lên đài quan sát Empire State Building - Ngắm toàn cảnh NYC</li>
+                        <li>• <strong>Trưa:</strong> Ăn trưa tại nhà hàng nổi tiếng Manhattan</li>
+                        <li>• <strong>Chiều:</strong> Mua sắm tại Fifth Avenue - Đại lộ xa xỉ nhất thế giới</li>
+                        <li>• <strong>Tối:</strong> Tự do khám phá ẩm thực New York hoặc xem Broadway Show (tự túc)</li>
+                    </ul>
+                    <p class="mt-3 text-sm text-gray-500 font-bold">🛏️ Nghỉ đêm: New York</p>
+                </div>
+
+                <!-- Day 4 -->
+                <div class="border-l-4 border-brand-blue pl-6 py-4 bg-gray-50">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="bg-brand-blue text-white px-4 py-2 font-heading font-bold text-xl">NGÀY 4</span>
+                        <h3 class="text-2xl font-heading font-bold text-brand-blue">New York - Philadelphia - Washington
+                            D.C.</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700 leading-relaxed">
+                        <li>• <strong>Sáng:</strong> Khởi hành đi Philadelphia (2.5 giờ)</li>
+                        <li>• <strong>10:00:</strong> Tham quan Chuông Tự Do (Liberty Bell) và Independence Hall</li>
+                        <li>• <strong>Trưa:</strong> Thưởng thức Philly Cheesesteak nổi tiếng</li>
+                        <li>• <strong>Chiều:</strong> Tiếp tục hành trình đến Washington D.C. (3 giờ)</li>
+                        <li>• <strong>Tối:</strong> Nhận phòng khách sạn, tự do dạo phố</li>
+                    </ul>
+                    <p class="mt-3 text-sm text-gray-500 font-bold">🛏️ Nghỉ đêm: Washington D.C.</p>
+                </div>
+
+                <!-- Day 5 -->
+                <div class="border-l-4 border-brand-blue pl-6 py-4 bg-gray-50">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="bg-brand-blue text-white px-4 py-2 font-heading font-bold text-xl">NGÀY 5</span>
+                        <h3 class="text-2xl font-heading font-bold text-brand-blue">Washington D.C. City Tour</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700 leading-relaxed">
+                        <li>• <strong>Sáng:</strong> Tham quan Nhà Trắng (White House) - Check-in bên ngoài</li>
+                        <li>• <strong>09:30:</strong> Viếng Đài tưởng niệm Lincoln (Lincoln Memorial)</li>
+                        <li>• <strong>11:00:</strong> Tham quan Tòa nhà Quốc hội (U.S. Capitol)</li>
+                        <li>• <strong>Trưa:</strong> Ăn trưa tại khu Georgetown</li>
+                        <li>• <strong>Chiều:</strong> Tham quan Bảo tàng Hàng không Vũ trụ Smithsonian (miễn phí)</li>
+                        <li>• <strong>Tối:</strong> Tự do khám phá National Mall về đêm</li>
+                    </ul>
+                    <p class="mt-3 text-sm text-gray-500 font-bold">🛏️ Nghỉ đêm: Washington D.C.</p>
+                </div>
+
+                <!-- Day 6 -->
+                <div class="border-l-4 border-brand-blue pl-6 py-4 bg-gray-50">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="bg-brand-blue text-white px-4 py-2 font-heading font-bold text-xl">NGÀY 6</span>
+                        <h3 class="text-2xl font-heading font-bold text-brand-blue">Washington D.C. - Los Angeles</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700 leading-relaxed">
+                        <li>• <strong>Sáng:</strong> Tự do mua sắm hoặc nghỉ ngơi</li>
+                        <li>• <strong>Trưa:</strong> Di chuyển ra sân bay, bay đến Los Angeles (5 giờ bay)</li>
+                        <li>• <strong>Chiều:</strong> Đến Los Angeles, nhận phòng khách sạn</li>
+                        <li>• <strong>Tối:</strong> Dạo bước trên Venice Beach hoặc Santa Monica Pier</li>
+                    </ul>
+                    <p class="mt-3 text-sm text-gray-500 font-bold">🛏️ Nghỉ đêm: Los Angeles</p>
+                </div>
+
+                <!-- Day 7 -->
+                <div class="border-l-4 border-brand-blue pl-6 py-4 bg-gray-50">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="bg-brand-blue text-white px-4 py-2 font-heading font-bold text-xl">NGÀY 7</span>
+                        <h3 class="text-2xl font-heading font-bold text-brand-blue">Los Angeles - Hollywood Tour</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700 leading-relaxed">
+                        <li>• <strong>Sáng:</strong> Tham quan Hollywood Sign - Biểu tượng điện ảnh</li>
+                        <li>• <strong>10:00:</strong> Dạo bước trên Đại lộ Danh vọng (Walk of Fame)</li>
+                        <li>• <strong>11:00:</strong> Chụp ảnh tại TCL Chinese Theatre</li>
+                        <li>• <strong>Trưa:</strong> Ăn trưa tại Beverly Hills</li>
+                        <li>• <strong>Chiều:</strong> Mua sắm tại Rodeo Drive - Thiên đường xa xỉ</li>
+                        <li>• <strong>16:00:</strong> Tham quan Griffith Observatory - Ngắm hoàng hôn LA</li>
+                        <li>• <strong>Tối:</strong> Tự do khám phá ẩm thực đa văn hóa LA</li>
+                    </ul>
+                    <p class="mt-3 text-sm text-gray-500 font-bold">🛏️ Nghỉ đêm: Los Angeles</p>
+                </div>
+
+                <!-- Day 8 -->
+                <div class="border-l-4 border-brand-blue pl-6 py-4 bg-gray-50">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="bg-brand-blue text-white px-4 py-2 font-heading font-bold text-xl">NGÀY 8</span>
+                        <h3 class="text-2xl font-heading font-bold text-brand-blue">Universal Studios Hollywood (Tự túc)
+                        </h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700 leading-relaxed">
+                        <li>• <strong>Cả ngày:</strong> Tự do vui chơi tại Universal Studios Hollywood</li>
+                        <li>• Trải nghiệm các trò chơi cảm giác mạnh</li>
+                        <li>• Tham quan Studio Tour - Hậu trường phim Hollywood</li>
+                        <li>• Khám phá The Wizarding World of Harry Potter</li>
+                        <li>• <em>Lưu ý: Vé vào cửa tự túc (~$100-150/người)</em></li>
+                    </ul>
+                    <p class="mt-3 text-sm text-gray-500 font-bold">🛏️ Nghỉ đêm: Los Angeles</p>
+                </div>
+
+                <!-- Day 9 -->
+                <div class="border-l-4 border-brand-blue pl-6 py-4 bg-gray-50">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="bg-brand-blue text-white px-4 py-2 font-heading font-bold text-xl">NGÀY 9</span>
+                        <h3 class="text-2xl font-heading font-bold text-brand-blue">Los Angeles - Về Việt Nam</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700 leading-relaxed">
+                        <li>• <strong>Sáng:</strong> Tự do mua sắm quà lưu niệm</li>
+                        <li>• <strong>Trưa:</strong> Trả phòng khách sạn, di chuyển ra sân bay LAX</li>
+                        <li>• <strong>Chiều:</strong> Làm thủ tục, khởi hành chuyến bay về Việt Nam</li>
+                        <li>• <strong>Tối:</strong> Nghỉ đêm trên máy bay</li>
+                    </ul>
+                    <p class="mt-3 text-sm text-gray-500 font-bold">🛏️ Nghỉ đêm: Trên máy bay</p>
+                </div>
+
+                <!-- Day 10 -->
+                <div class="border-l-4 border-brand-gold pl-6 py-4 bg-yellow-50">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="bg-brand-gold text-brand-blue px-4 py-2 font-heading font-bold text-xl">NGÀY
+                            10</span>
+                        <h3 class="text-2xl font-heading font-bold text-brand-blue">Về Đến TP.HCM</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700 leading-relaxed">
+                        <li>• <strong>Sáng:</strong> Máy bay hạ cánh tại sân bay Tân Sơn Nhất</li>
+                        <li>• Nhận hành lý, chia tay đoàn</li>
+                        <li>• Kết thúc chuyến hành trình đáng nhớ tại Mỹ</li>
+                    </ul>
+                    <p class="mt-4 p-4 bg-brand-light border-l-4 border-brand-gold rounded-r">
+                        <strong class="text-brand-blue">🎉 Hẹn gặp lại quý khách trong những chuyến đi tiếp
+                            theo!</strong>
+                    </p>
+                </div>
+
+                <!-- Important Notes -->
+                <div class="mt-8 p-6 bg-blue-50 border-2 border-brand-blue rounded-lg">
+                    <h4 class="font-heading font-bold text-xl text-brand-blue mb-4">📋 LƯU Ý QUAN TRỌNG</h4>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>✓ Lịch trình có thể thay đổi tùy theo lịch thi đấu chính thức của FIFA</li>
+                        <li>✓ Thời gian tham quan có thể điều chỉnh theo tình hình thực tế</li>
+                        <li>✓ Một số điểm tham quan tự túc sẽ được hướng dẫn viên hỗ trợ</li>
+                        <li>✓ Vé trận đấu đảm bảo 100% theo gói đã chọn</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="sticky bottom-0 bg-gray-100 p-6 border-t flex justify-center gap-4">
+                <button id="closeModalBtn2"
+                    class="px-8 py-3 bg-gray-500 text-white font-heading font-bold uppercase tracking-wider hover:bg-gray-600 transition">
+                    Đóng
+                </button>
+                <a href="#contact" id="bookFromModal"
+                    class="px-8 py-3 bg-brand-red text-white font-heading font-bold uppercase tracking-wider hover:bg-red-700 transition">
+                    Đặt Tour Ngay
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="bg-gray-900 text-white pt-20 pb-10 border-t-4 border-brand-red">
         <div class="container mx-auto px-6">
@@ -1130,6 +1344,46 @@
             const toast = document.getElementById('toast');
             toast.classList.add('hidden');
         }
+
+        // Itinerary Modal Controls
+        const modal = document.getElementById('itineraryModal');
+        const showBtn = document.getElementById('showItineraryBtn');
+        const closeBtn = document.getElementById('closeModalBtn');
+        const closeBtn2 = document.getElementById('closeModalBtn2');
+        const bookBtn = document.getElementById('bookFromModal');
+
+        // Show modal
+        showBtn.addEventListener('click', () => {
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        });
+
+        // Close modal functions
+        function closeModal() {
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+
+        closeBtn.addEventListener('click', closeModal);
+        closeBtn2.addEventListener('click', closeModal);
+
+        // Close when clicking outside modal content
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Close modal when booking
+        bookBtn.addEventListener('click', closeModal);
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeModal();
+            }
+        });
+
     </script>
 </body>
 
