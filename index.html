@@ -13,8 +13,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Oswald:wght@400;500;600;700&family=Yellowtail&display=swap"
         rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 
     <script>
         tailwind.config = {
@@ -164,7 +163,10 @@
     <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-md transition-all duration-300" id="navbar">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <i class="fa-solid fa-earth-americas text-4xl text-brand-blue"></i>
+                <svg class="w-10 h-10 text-brand-blue" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                </svg>
                 <div class="flex flex-col">
                     <span
                         class="text-2xl font-bold text-brand-blue leading-none font-heading uppercase tracking-wide">WC2026</span>
@@ -207,7 +209,9 @@
 
             <!-- Mobile Menu Button -->
             <button id="mobile-menu-btn" class="md:hidden text-2xl text-brand-blue focus:outline-none">
-                <i class="fa-solid fa-bars"></i>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+                </svg>
             </button>
         </div>
 
@@ -243,7 +247,10 @@
             <div class="inline-block mb-6">
                 <span
                     class="bg-brand-red/90 backdrop-blur px-6 py-2 text-base md:text-lg font-bold font-heading uppercase tracking-widest shadow-lg border-l-4 border-brand-gold">
-                    <i class="fa-solid fa-clock mr-2"></i> Lịch trình: 10 Ngày 9 Đêm
+                    <svg class="inline w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
+                    </svg> Lịch trình: 10 Ngày 9 Đêm
                 </span>
             </div>
 
@@ -283,7 +290,9 @@
                         class="absolute inset-0 w-full h-full bg-red-700 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300">
                     </div>
                     <span class="relative skew-x-[10deg] inline-block flex items-center gap-3">
-                        <i class="fa-solid fa-paper-plane"></i> Đăng Ký Visa Ngay
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                        </svg> Đăng Ký Visa Ngay
                     </span>
                 </a>
                 <a href="#itinerary"
@@ -292,7 +301,10 @@
                         class="absolute inset-0 w-full h-full bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300">
                     </div>
                     <span class="relative skew-x-[10deg] inline-block flex items-center gap-3">
-                        <i class="fa-solid fa-calendar-check"></i> Xem Lịch Trình
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z" />
+                        </svg> Xem Lịch Trình
                     </span>
                 </a>
             </div>
@@ -300,7 +312,12 @@
 
         <!-- Scroll Down Indicator -->
         <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
-            <a href="#itinerary" class="text-white text-3xl"><i class="fa-solid fa-angles-down"></i></a>
+            <a href="#itinerary" class="text-white text-3xl">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M16.59 5.59L18 7l-6 6-6-6 1.41-1.41L12 10.17l4.59-4.58zM16.59 11.59L18 13l-6 6-6-6 1.41-1.41L12 16.17l4.59-4.58z" />
+                </svg>
+            </a>
         </div>
     </section>
 
@@ -353,12 +370,20 @@
                         </div>
                         <div
                             class="flex-grow bg-white border-l-4 border-brand-blue p-8 shadow-sm hover:shadow-2xl transition duration-300 group-hover:bg-gray-50">
-                            <h4 class="text-2xl font-heading font-bold text-brand-blue mb-2 uppercase"><i
-                                    class="fa-solid fa-plane-departure mr-3 text-brand-red"></i> TP.HCM - New York</h4>
+                            <h4 class="text-2xl font-heading font-bold text-brand-blue mb-2 uppercase">
+                                <svg class="inline w-6 h-6 mr-3 text-brand-red" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M2.5 19h19v2h-19v-2zm19.57-9.36c-.21-.8-1.04-1.28-1.84-1.06L14.92 10l-6.9-6.43-1.93.51 4.14 7.17-4.97 1.33-1.97-1.54-1.45.39 1.82 3.16.77 1.33 1.6-.43 5.31-1.42 4.35-1.16L21 11.49c.81-.23 1.28-1.05 1.07-1.85z" />
+                                </svg> TP.HCM - New York
+                            </h4>
                             <p class="text-gray-600 mb-2 leading-relaxed text-lg">Tập trung tại sân bay Tân Sơn Nhất.
                                 Bay hãng hàng không 5 sao (Qatar/Emirates/ANA). Nghỉ đêm trên máy bay.</p>
-                            <div class="text-sm text-gray-500 font-bold uppercase tracking-wide mt-4"><i
-                                    class="fa-solid fa-bed mr-2"></i> Nghỉ đêm: Trên máy bay</div>
+                            <div class="text-sm text-gray-500 font-bold uppercase tracking-wide mt-4">
+                                <svg class="inline w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V7H1v10h22v-6c0-2.21-1.79-4-4-4z" />
+                                </svg> Nghỉ đêm: Trên máy bay
+                            </div>
                         </div>
                     </div>
 
@@ -376,7 +401,10 @@
                                 Sự kiện chính</div>
                             <h4
                                 class="text-2xl font-heading font-bold text-brand-red mb-2 uppercase flex items-center gap-3">
-                                <i class="fa-solid fa-futbol text-3xl"></i> Xem Trận Đấu Vòng Bảng
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 3.3l1.35-.95c1.82.56 3.37 1.76 4.38 3.34l-.39 1.34-1.35.46L15 6.7V5.3zm-3.35-.95L11 5.3v1.4L9.01 9.49l-1.35-.46-.39-1.34c1.01-1.58 2.56-2.78 4.38-3.34zM7.08 17.11l-1.14.1C4.73 15.81 4 13.99 4 12c0-.69.1-1.36.26-2l1.1.15 1.09 1.35L7.08 13v4.11zm1.16 2.12C9.16 20.39 10.51 21 12 21c.34 0 .68-.03 1.01-.08l.54-1.4.01-1.46-1.51-1.5h-2.1l-1.71 2.67zm7.6-2.12v-4.11l.63-1.5 1.09-1.35 1.1-.15c.16.64.26 1.31.26 2 0 1.99-.73 3.81-1.94 5.21l-1.14-.1zm-.29-11.62l1.45.49c.32.67.55 1.39.68 2.14l-.74.74L15 11.02l-1.97-2.46.09-1.09 1.98-.98z" />
+                                </svg> Xem Trận Đấu Vòng Bảng
                             </h4>
                             <p class="text-gray-600 mb-4 leading-relaxed text-lg">Sáng: Tham quan <strong>Tượng Nữ Thần
                                     Tự Do</strong>, Phố Wall.<br>Chiều: Di chuyển đến SVĐ MetLife. Hòa mình vào không
@@ -397,12 +425,20 @@
                         </div>
                         <div
                             class="flex-grow bg-white border-l-4 border-brand-blue p-8 shadow-sm hover:shadow-2xl transition duration-300 group-hover:bg-gray-50">
-                            <h4 class="text-2xl font-heading font-bold text-brand-blue mb-2 uppercase"><i
-                                    class="fa-solid fa-city mr-3 text-brand-red"></i> New York City Tour</h4>
+                            <h4 class="text-2xl font-heading font-bold text-brand-blue mb-2 uppercase">
+                                <svg class="inline w-6 h-6 mr-3 text-brand-red" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M15 11V5l-3-3-3 3v2H3v14h18V11h-6zm-8 8H5v-2h2v2zm0-4H5v-2h2v2zm0-4H5V9h2v2zm6 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V9h2v2zm0-4h-2V5h2v2zm6 12h-2v-2h2v2zm0-4h-2v-2h2v2z" />
+                                </svg> New York City Tour
+                            </h4>
                             <p class="text-gray-600 mb-2 leading-relaxed text-lg">Check-in Quảng trường Thời Đại, Trung
                                 tâm Rockefeller, Empire State Building. Mua sắm tại Fifth Avenue.</p>
-                            <div class="text-sm text-gray-500 font-bold uppercase tracking-wide mt-4"><i
-                                    class="fa-solid fa-bed mr-2"></i> Nghỉ đêm: New York</div>
+                            <div class="text-sm text-gray-500 font-bold uppercase tracking-wide mt-4">
+                                <svg class="inline w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V7H1v10h22v-6c0-2.21-1.79-4-4-4z" />
+                                </svg> Nghỉ đêm: New York
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -432,7 +468,10 @@
                     class="bg-white p-8 shadow-sm hover:shadow-xl transition duration-300 border-b-4 border-brand-red group">
                     <div class="flex items-center gap-4 mb-6">
                         <div class="text-4xl text-brand-red group-hover:scale-110 transition duration-300">
-                            <i class="fa-solid fa-passport"></i>
+                            <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M20 5h-9.12L9 3H4c-1.1 0-1.99.9-1.99 2L2 19c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.65 0-3 1.35-3 3s1.35 3 3 3 3-1.35 3-3-1.35-3-3-3z" />
+                            </svg>
                         </div>
                         <h3 class="font-heading font-bold text-2xl uppercase tracking-wide text-brand-blue">Visa Mỹ</h3>
                     </div>
@@ -444,7 +483,10 @@
                     class="bg-white p-8 shadow-sm hover:shadow-xl transition duration-300 border-b-4 border-green-500 group">
                     <div class="flex items-center gap-4 mb-6">
                         <div class="text-4xl text-green-500 group-hover:scale-110 transition duration-300">
-                            <i class="fa-solid fa-briefcase-medical"></i>
+                            <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.79 9.23l-2-3.46c-.21-.37-.61-.61-1.04-.61h-2.94L13.62 4c-.28-.36-.72-.58-1.18-.58H7.57c-.46 0-.9.21-1.18.58L5.2 5.16H2.25c-.42 0-.82.24-1.04.61l-2 3.46c-.14.23-.21.49-.21.76 0 .83.67 1.5 1.5 1.5.38 0 .73-.14 1-.38l.55-.45V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-8.34l.55.45c.27.24.62.38 1 .38.83 0 1.5-.67 1.5-1.5 0-.27-.07-.53-.21-.76zM7.5 18.5c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm9 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" />
+                            </svg>
                         </div>
                         <h3 class="font-heading font-bold text-2xl uppercase tracking-wide text-brand-blue">Thuốc & Y Tế
                         </h3>
@@ -457,7 +499,10 @@
                     class="bg-white p-8 shadow-sm hover:shadow-xl transition duration-300 border-b-4 border-brand-gold group">
                     <div class="flex items-center gap-4 mb-6">
                         <div class="text-4xl text-brand-gold group-hover:scale-110 transition duration-300">
-                            <i class="fa-solid fa-user-shield"></i>
+                            <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" />
+                            </svg>
                         </div>
                         <h3 class="font-heading font-bold text-2xl uppercase tracking-wide text-brand-blue">An Ninh</h3>
                     </div>
@@ -469,7 +514,10 @@
                     class="bg-white p-8 shadow-sm hover:shadow-xl transition duration-300 border-b-4 border-blue-400 group">
                     <div class="flex items-center gap-4 mb-6">
                         <div class="text-4xl text-blue-400 group-hover:scale-110 transition duration-300">
-                            <i class="fa-solid fa-restroom"></i>
+                            <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M7.5 2c-1.79 1.15-3 3.18-3 5.5s1.21 4.35 3.03 5.5C4.46 13 2 10.54 2 7.5 2 5.18 3.21 3.15 5 2h2.5zm9 0C14.71 3.15 13.5 5.18 13.5 7.5s1.21 4.35 3 5.5c-3.07 0-5.5-2.46-5.5-5.5S13.43 3.15 16.5 2h.5zM22 7.5c0 3.04-2.46 5.5-5.5 5.5 1.79-1.15 3-3.18 3-5.5s-1.21-4.35-3-5.5H22c1.79 1.15 3 3.18 3 5.5zM12 9c-2.21 0-4 1.79-4 4v10h8V13c0-2.21-1.79-4-4-4z" />
+                            </svg>
                         </div>
                         <h3 class="font-heading font-bold text-2xl uppercase tracking-wide text-brand-blue">WC Công Cộng
                         </h3>
@@ -481,7 +529,10 @@
                     class="bg-white p-8 shadow-sm hover:shadow-xl transition duration-300 border-b-4 border-purple-500 group">
                     <div class="flex items-center gap-4 mb-6">
                         <div class="text-4xl text-purple-500 group-hover:scale-110 transition duration-300">
-                            <i class="fa-solid fa-taxi"></i>
+                            <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z" />
+                            </svg>
                         </div>
                         <h3 class="font-heading font-bold text-2xl uppercase tracking-wide text-brand-blue">Di Chuyển
                         </h3>
@@ -493,7 +544,10 @@
                     class="bg-white p-8 shadow-sm hover:shadow-xl transition duration-300 border-b-4 border-indigo-500 group">
                     <div class="flex items-center gap-4 mb-6">
                         <div class="text-4xl text-indigo-500 group-hover:scale-110 transition duration-300">
-                            <i class="fa-solid fa-wifi"></i>
+                            <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z" />
+                            </svg>
                         </div>
                         <h3 class="font-heading font-bold text-2xl uppercase tracking-wide text-brand-blue">Sim &
                             Internet</h3>
@@ -571,11 +625,17 @@
                 </div>
                 <div class="hidden md:flex gap-2">
                     <button
-                        class="w-10 h-10 rounded-full bg-white shadow hover:bg-brand-red hover:text-white transition flex items-center justify-center"><i
-                            class="fa-solid fa-arrow-left"></i></button>
+                        class="w-10 h-10 rounded-full bg-white shadow hover:bg-brand-red hover:text-white transition flex items-center justify-center">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                        </svg>
+                    </button>
                     <button
-                        class="w-10 h-10 rounded-full bg-white shadow hover:bg-brand-red hover:text-white transition flex items-center justify-center"><i
-                            class="fa-solid fa-arrow-right"></i></button>
+                        class="w-10 h-10 rounded-full bg-white shadow hover:bg-brand-red hover:text-white transition flex items-center justify-center">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                        </svg>
+                    </button>
                 </div>
             </div>
 
@@ -587,8 +647,12 @@
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-6">
                         <h3 class="text-white text-2xl font-bold mb-1">New York / New Jersey</h3>
-                        <p class="text-gray-300 text-sm mb-2"><i
-                                class="fa-solid fa-location-dot text-brand-red mr-1"></i> Sân MetLife</p>
+                        <p class="text-gray-300 text-sm mb-2">
+                            <svg class="inline w-4 h-4 text-brand-red mr-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                            </svg> Sân MetLife
+                        </p>
                         <p
                             class="text-white text-sm opacity-0 group-hover:opacity-100 transition duration-300 transform translate-y-4 group-hover:translate-y-0">
                             Nơi dự kiến diễn ra trận chung kết kịch tính nhất lịch sử.</p>
@@ -603,8 +667,12 @@
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-6">
                         <h3 class="text-white text-2xl font-bold mb-1">Los Angeles</h3>
-                        <p class="text-gray-300 text-sm mb-2"><i
-                                class="fa-solid fa-location-dot text-brand-red mr-1"></i> Sân SoFi</p>
+                        <p class="text-gray-300 text-sm mb-2">
+                            <svg class="inline w-4 h-4 text-brand-red mr-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                            </svg> Sân SoFi
+                        </p>
                         <p
                             class="text-white text-sm opacity-0 group-hover:opacity-100 transition duration-300 transform translate-y-4 group-hover:translate-y-0">
                             Kinh đô điện ảnh và sân vận động hiện đại nhất thế giới.</p>
@@ -618,8 +686,12 @@
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-6">
                         <h3 class="text-white text-2xl font-bold mb-1">Miami</h3>
-                        <p class="text-gray-300 text-sm mb-2"><i
-                                class="fa-solid fa-location-dot text-brand-red mr-1"></i> Sân Hard Rock</p>
+                        <p class="text-gray-300 text-sm mb-2">
+                            <svg class="inline w-4 h-4 text-brand-red mr-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                            </svg> Sân Hard Rock
+                        </p>
                         <p
                             class="text-white text-sm opacity-0 group-hover:opacity-100 transition duration-300 transform translate-y-4 group-hover:translate-y-0">
                             Thành phố biển sôi động, văn hóa Latin và những bữa tiệc bất tận.</p>
@@ -647,12 +719,24 @@
                             class="text-lg text-gray-400 font-normal">/khách</span></div>
                     <div class="w-full h-px bg-gray-200 my-6"></div>
                     <ul class="space-y-4 mb-8 flex-grow text-sm font-medium">
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> Khách sạn
-                            3-4 sao</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> 1 Vé xem
-                            trận đấu (CAT 3)</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> Xe đưa đón
-                            theo đoàn</li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                            </svg> Khách sạn
+                            3-4 sao
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                            </svg> 1 Vé xem
+                            trận đấu (CAT 3)
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                            </svg> Xe đưa đón
+                            theo đoàn
+                        </li>
                     </ul>
                     <a href="#contact" onclick="selectPackage('Cơ Bản')"
                         class="block w-full py-3 border-2 border-brand-blue text-brand-blue font-heading font-bold uppercase tracking-widest text-center hover:bg-brand-blue hover:text-white transition">Chọn
@@ -672,14 +756,30 @@
                     </p>
                     <div class="w-full h-px bg-gray-200 my-6"></div>
                     <ul class="space-y-4 mb-8 flex-grow font-medium">
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-red"></i> <strong>Vé
-                                máy bay khứ hồi</strong></li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-red"></i> Khách sạn 4
-                            sao trung tâm</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-red"></i> <strong>1
-                                Vé trận đấu (CAT 2)</strong></li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-red"></i> Bao đậu
-                            Visa</li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-brand-red" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                            </svg> <strong>Vé
+                                máy bay khứ hồi</strong>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-brand-red" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                            </svg> Khách sạn 4
+                            sao trung tâm
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-brand-red" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                            </svg> <strong>1
+                                Vé trận đấu (CAT 2)</strong>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-brand-red" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                            </svg> Bao đậu
+                            Visa
+                        </li>
                     </ul>
                     <a href="#contact" onclick="selectPackage('Phổ Thông')"
                         class="block w-full py-4 bg-brand-red text-white font-heading font-bold uppercase tracking-widest text-center hover:bg-red-800 transition shadow-lg">Đăng
@@ -694,14 +794,34 @@
                     <div class="text-5xl font-heading font-bold text-white mb-2">250Tr+</div>
                     <div class="w-full h-px bg-gray-700 my-6"></div>
                     <ul class="space-y-4 mb-8 flex-grow text-sm font-medium text-gray-300">
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-star text-brand-gold"></i> Bay Thương
-                            Gia</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-star text-brand-gold"></i> Khách sạn 5
-                            sao</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-star text-brand-gold"></i> <strong>Vé
-                                VIP Hospitality</strong></li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-star text-brand-gold"></i> Xe riêng
-                            đưa đón</li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-brand-gold" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg> Bay Thương
+                            Gia
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-brand-gold" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg> Khách sạn 5
+                            sao
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-brand-gold" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg> <strong>Vé
+                                VIP Hospitality</strong>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-brand-gold" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg> Xe riêng
+                            đưa đón
+                        </li>
                     </ul>
                     <a href="#contact" onclick="selectPackage('VIP')"
                         class="block w-full py-3 border-2 border-brand-gold text-brand-gold font-heading font-bold uppercase tracking-widest text-center hover:bg-brand-gold hover:text-black transition">Liên
@@ -725,8 +845,11 @@
                     <summary
                         class="flex justify-between items-center font-heading font-bold text-xl text-gray-800 uppercase">
                         <span>Giá tour đã bao gồm vé máy bay chưa?</span>
-                        <span class="transition group-open:rotate-180"><i
-                                class="fa-solid fa-chevron-down text-brand-red"></i></span>
+                        <span class="transition group-open:rotate-180">
+                            <svg class="w-5 h-5 text-brand-red" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" />
+                            </svg>
+                        </span>
                     </summary>
                     <div class="mt-4 text-gray-600 leading-relaxed pt-2">
                         Với <strong>Gói Phổ Thông</strong> và <strong>VIP</strong>, giá tour đã bao gồm vé máy bay khứ
@@ -739,8 +862,11 @@
                     <summary
                         class="flex justify-between items-center font-heading font-bold text-xl text-gray-800 uppercase">
                         <span>Nếu tôi bị trượt Visa Mỹ thì sao?</span>
-                        <span class="transition group-open:rotate-180"><i
-                                class="fa-solid fa-chevron-down text-brand-red"></i></span>
+                        <span class="transition group-open:rotate-180">
+                            <svg class="w-5 h-5 text-brand-red" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" />
+                            </svg>
+                        </span>
                     </summary>
                     <div class="mt-4 text-gray-600 leading-relaxed pt-2">
                         Nếu rớt hoàn toàn, chúng tôi sẽ hoàn lại tiền cọc tour (trừ phí phỏng vấn Lãnh sự quán và phí
@@ -753,8 +879,11 @@
                     <summary
                         class="flex justify-between items-center font-heading font-bold text-xl text-gray-800 uppercase">
                         <span>Trận đấu tôi xem là trận nào?</span>
-                        <span class="transition group-open:rotate-180"><i
-                                class="fa-solid fa-chevron-down text-brand-red"></i></span>
+                        <span class="transition group-open:rotate-180">
+                            <svg class="w-5 h-5 text-brand-red" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" />
+                            </svg>
+                        </span>
                     </summary>
                     <div class="mt-4 text-gray-600 leading-relaxed pt-2">
                         Tour cam kết vé xem các trận vòng bảng tại New York/New Jersey. Cặp đấu chính thức sẽ được cập
@@ -780,15 +909,30 @@
                         <h3 class="text-4xl font-heading font-bold mb-6 uppercase leading-tight">Đăng Ký Ngay <br>Giữ
                             Chỗ Đẹp</h3>
                         <div class="space-y-6 text-lg">
-                            <p class="flex items-center gap-4"><i
-                                    class="fa-solid fa-phone w-8 h-8 rounded-full bg-white text-brand-blue flex items-center justify-center"></i>
-                                1900 123 456</p>
-                            <p class="flex items-center gap-4"><i
-                                    class="fa-solid fa-envelope w-8 h-8 rounded-full bg-white text-brand-blue flex items-center justify-center"></i>
-                                sales@capellatravel.com</p>
-                            <p class="flex items-center gap-4"><i
-                                    class="fa-solid fa-location-dot w-8 h-8 rounded-full bg-white text-brand-blue flex items-center justify-center"></i>
-                                Q1, TP. Hồ Chí Minh</p>
+                            <p class="flex items-center gap-4">
+                                <svg class="w-8 h-8 rounded-full bg-white text-brand-blue flex items-center justify-center p-2"
+                                    fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                                </svg>
+                                1900 123 456
+                            </p>
+                            <p class="flex items-center gap-4">
+                                <svg class="w-8 h-8 rounded-full bg-white text-brand-blue flex items-center justify-center p-2"
+                                    fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                                </svg>
+                                sales@capellatravel.com
+                            </p>
+                            <p class="flex items-center gap-4">
+                                <svg class="w-8 h-8 rounded-full bg-white text-brand-blue flex items-center justify-center p-2"
+                                    fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                                </svg>
+                                Q1, TP. Hồ Chí Minh
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -848,7 +992,10 @@
             <div class="grid md:grid-cols-4 gap-12 mb-16">
                 <div class="col-span-1">
                     <div class="flex items-center gap-3 mb-6">
-                        <i class="fa-solid fa-earth-americas text-3xl text-brand-red"></i>
+                        <svg class="w-8 h-8 text-brand-red" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                        </svg>
                         <span class="text-2xl font-heading font-bold uppercase">Capella Travel</span>
                     </div>
                     <p class="text-gray-400 text-sm leading-relaxed">Đối tác tin cậy cho những hành trình thể thao đẳng
@@ -876,11 +1023,19 @@
                     <h4 class="text-lg font-heading font-bold uppercase mb-6 tracking-wider text-brand-gold">Social</h4>
                     <div class="flex space-x-4">
                         <a href="#"
-                            class="w-12 h-12 border border-gray-700 flex items-center justify-center hover:bg-brand-blue hover:border-brand-blue transition"><i
-                                class="fa-brands fa-facebook-f"></i></a>
+                            class="w-12 h-12 border border-gray-700 flex items-center justify-center hover:bg-brand-blue hover:border-brand-blue transition">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z" />
+                            </svg>
+                        </a>
                         <a href="#"
-                            class="w-12 h-12 border border-gray-700 flex items-center justify-center hover:bg-brand-red hover:border-brand-red transition"><i
-                                class="fa-brands fa-youtube"></i></a>
+                            class="w-12 h-12 border border-gray-700 flex items-center justify-center hover:bg-brand-red hover:border-brand-red transition">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -893,13 +1048,20 @@
     <!-- Toast Notification -->
     <div id="toast"
         class="fixed top-24 right-5 bg-white border-l-4 border-green-500 text-gray-800 px-6 py-4 shadow-2xl hidden z-50 flex items-center gap-4">
-        <i class="fa-solid fa-circle-check text-green-500 text-2xl"></i>
+        <svg class="w-6 h-6 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+            <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+        </svg>
         <div>
             <h4 class="font-heading font-bold text-lg uppercase">Đã nhận thông tin!</h4>
             <p class="text-sm text-gray-500">Chúng tôi sẽ liên hệ trong 24h.</p>
         </div>
-        <button onclick="closeToast()" class="text-gray-400 hover:text-gray-600 ml-2"><i
-                class="fa-solid fa-xmark"></i></button>
+        <button onclick="closeToast()" class="text-gray-400 hover:text-gray-600 ml-2">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                    d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+            </svg>
+        </button>
     </div>
 
     <script>
