@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mỹ & World Cup 2026 - Giấc Mơ Kép</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-gold': '#D4AF37',
+                        'brand-gold-hover': '#B5952F',
+                        'brand-dark': '#0F172A',
+                        'brand-red': '#DA251D',
+                    },
+                    fontFamily: {
+                        'display': ['Montserrat', 'sans-serif'],
+                        'body': ['Open Sans', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Utilities */
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .text-shadow-lg {
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Hide scrollbar for carousel but keep functionality */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Animation classes */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Parallax fix for mobile */
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        @media (max-width: 768px) {
+            .parallax-bg {
+                background-attachment: scroll;
+                /* Fix jitter on mobile */
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-brand-dark text-white font-body overflow-x-hidden antialiased">
+
+    <!-- Sticky Header -->
+    <header
+        class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10 transition-all duration-300"
+        id="navbar">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="text-xl font-display font-black text-white tracking-tighter">
+                WC<span class="text-brand-gold">2026</span>
+            </div>
+            <a href="#register"
+                class="bg-brand-gold hover:bg-brand-gold-hover text-black font-bold py-2 px-4 rounded-full text-sm transition-transform transform hover:scale-105">
+                Đăng Ký Ngay
+            </a>
+        </div>
+    </header>
+
+    <!-- SECTION 1: HERO SHOT - Giấc Mơ Kép Vẫy Gọi -->
+    <section class="relative h-screen min-h-[600px] w-full flex items-center justify-center overflow-hidden">
+        <!-- Background Image (Simulated Hero Shot: Statue + Stadium) -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1549520886-21840c83e18a?q=80&w=1974&auto=format&fit=crop"
+                alt="Statue of Liberty Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-brand-dark"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center pt-20">
+            <span
+                class="inline-block py-1 px-3 border border-brand-gold text-brand-gold rounded-full text-xs font-bold tracking-widest mb-4 uppercase animate-bounce">
+                Hành Trình Giấc Mơ
+            </span>
+            <h1 class="font-display font-black text-5xl md:text-7xl lg:text-8xl leading-tight mb-4 text-shadow-lg">
+                MỸ & <br><span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-yellow-200">WORLD
+                    CUP</span> 2026
+            </h1>
+            <p class="text-lg md:text-2xl font-light mb-8 text-gray-200 max-w-2xl mx-auto text-shadow">
+                Chuyến đi để đời. Vị thế của bạn. <br>
+                <span class="italic text-brand-gold">Khi giấc mơ Mỹ hòa cùng nhịp đập bóng đá toàn cầu.</span>
+            </p>
+            <a href="#register"
+                class="group relative inline-flex items-center justify-center px-8 py-4 text-base font-bold text-black transition-all duration-200 bg-brand-gold rounded-full hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-gold ring-offset-brand-dark">
+                <span>NHẬN TƯ VẤN VIP NGAY</span>
+                <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                <div class="absolute inset-0 rounded-full ring-4 ring-white/20 group-hover:ring-white/40 animate-pulse">
+                </div>
+            </a>
+        </div>
+
+        <!-- Scroll Down Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-white/50 text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- SECTION 2: CAROUSEL - Tự Hào Việt Nam -->
+    <section class="py-20 bg-brand-dark relative">
+        <div class="container mx-auto px-4 mb-10 text-center fade-in-up">
+            <h2 class="font-display font-bold text-3xl md:text-4xl mb-4">
+                <span class="text-brand-red">Tự Hào Việt Nam</span> <br> Giữa Lễ Hội Thế Giới
+            </h2>
+            <p class="text-gray-400 max-w-2xl mx-auto">
+                Bạn không chỉ là khán giả. Bạn là một phần của lễ hội bóng đá lớn nhất hành tinh. Hòa mình vào dòng
+                người, khoác lên màu cờ sắc áo tại trời Tây.
+            </p>
+        </div>
+
+        <!-- Horizontal Scroll Snap Container -->
+        <div class="relative w-full">
+            <div class="flex overflow-x-auto space-x-4 px-4 pb-8 no-scrollbar snap-x snap-mandatory" id="carousel">
+                <!-- Slide 1 -->
+                <div
+                    class="snap-center shrink-0 w-[85vw] md:w-[400px] rounded-2xl overflow-hidden relative shadow-2xl transform transition-transform duration-300 hover:scale-[1.02]">
+                    <img src="https://images.unsplash.com/photo-1522778119026-d647f0565c6a?q=80&w=2070&auto=format&fit=crop"
+                        alt="Fans Cheering" class="w-full h-[500px] object-cover">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black to-transparent p-6 pt-20">
+                        <p class="font-bold text-xl">Sắc đỏ rực rỡ</p>
+                        <p class="text-sm text-gray-300">Nổi bật giữa hàng vạn CĐV quốc tế.</p>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div
+                    class="snap-center shrink-0 w-[85vw] md:w-[400px] rounded-2xl overflow-hidden relative shadow-2xl transform transition-transform duration-300 hover:scale-[1.02]">
+                    <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?q=80&w=2067&auto=format&fit=crop"
+                        alt="Stadium Exterior" class="w-full h-[500px] object-cover">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black to-transparent p-6 pt-20">
+                        <p class="font-bold text-xl">Không khí lễ hội</p>
+                        <p class="text-sm text-gray-300">Bên ngoài sân vận động huyền thoại.</p>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div
+                    class="snap-center shrink-0 w-[85vw] md:w-[400px] rounded-2xl overflow-hidden relative shadow-2xl transform transition-transform duration-300 hover:scale-[1.02]">
+                    <img src="https://images.unsplash.com/photo-1496337589254-7e19d01cec44?q=80&w=2070&auto=format&fit=crop"
+                        alt="Friends Selfie" class="w-full h-[500px] object-cover">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black to-transparent p-6 pt-20">
+                        <p class="font-bold text-xl">Kết nối năm châu</p>
+                        <p class="text-sm text-gray-300">Giao lưu với bạn bè quốc tế.</p>
+                    </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div
+                    class="snap-center shrink-0 w-[85vw] md:w-[400px] rounded-2xl overflow-hidden relative shadow-2xl transform transition-transform duration-300 hover:scale-[1.02]">
+                    <img src="https://images.unsplash.com/photo-1628891240439-d890b9122240?q=80&w=2070&auto=format&fit=crop"
+                        alt="USA Street" class="w-full h-[500px] object-cover">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black to-transparent p-6 pt-20">
+                        <p class="font-bold text-xl">Đường phố Mỹ</p>
+                        <p class="text-sm text-gray-300">Trải nghiệm văn hóa bản địa sôi động.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Swipe Hint -->
+            <div class="text-center mt-4 text-white/50 text-sm animate-pulse md:hidden">
+                <i class="fas fa-hand-point-up rotate-90 mr-2"></i> Lướt để xem thêm
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: PARALLAX - Trải Nghiệm VIP -->
+    <section class="relative h-[80vh] flex items-center justify-center parallax-bg"
+        style="background-image: url('https://images.unsplash.com/photo-1521731978332-9e9e714bdd20?q=80&w=2074&auto=format&fit=crop');">
+        <div class="absolute inset-0 bg-black/60"></div>
+
+        <div class="relative z-10 px-6 max-w-3xl mx-auto text-center fade-in-up">
+            <div
+                class="w-16 h-16 bg-brand-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-[0_0_20px_rgba(212,175,55,0.5)]">
+                <i class="fas fa-crown text-black text-2xl"></i>
+            </div>
+            <h2 class="font-display font-black text-4xl md:text-5xl mb-6 text-white leading-tight">
+                TRẢI NGHIỆM <br><span class="text-brand-gold">VIP ĐẲNG CẤP</span>
+            </h2>
+            <p class="text-lg md:text-xl font-light text-gray-200 mb-8 leading-relaxed">
+                Tầm nhìn bao quát từ vị trí đẹp nhất. Dịch vụ thượng hạng. <br>
+                Cảm nhận sự choáng ngợp của sân vận động quy mô hàng đầu thế giới mà không phải chen lấn.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <div
+                    class="flex items-center text-sm font-semibold bg-white/10 backdrop-blur px-4 py-2 rounded-lg border border-white/20">
+                    <i class="fas fa-couch text-brand-gold mr-2"></i> Ghế ngồi hạng nhất
+                </div>
+                <div
+                    class="flex items-center text-sm font-semibold bg-white/10 backdrop-blur px-4 py-2 rounded-lg border border-white/20">
+                    <i class="fas fa-wine-glass text-brand-gold mr-2"></i> Dịch vụ 5 sao
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: EMOTION CLOSE-UP - Bùng Nổ Cảm Xúc -->
+    <section class="py-20 bg-gradient-to-b from-brand-dark to-black">
+        <div class="container mx-auto px-4 text-center mb-10 fade-in-up">
+            <h2 class="font-display font-bold text-3xl mb-2">Bùng Nổ Cảm Xúc</h2>
+            <div class="w-20 h-1 bg-brand-red mx-auto"></div>
+        </div>
+
+        <div class="relative w-full h-auto min-h-[500px] md:h-[80vh] overflow-hidden group fade-in-up">
+            <!-- Simulated Emotional Image -->
+            <img src="https://images.unsplash.com/photo-1560272564-c83b66b1ad12?q=80&w=1949&auto=format&fit=crop"
+                alt="Emotional Fans"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter brightness-75 group-hover:brightness-100">
+
+            <div
+                class="absolute inset-0 flex flex-col justify-end p-8 md:p-16 bg-gradient-to-t from-black via-transparent to-transparent">
+                <blockquote class="max-w-3xl border-l-4 border-brand-red pl-6">
+                    <p class="text-2xl md:text-4xl font-display font-bold italic text-white mb-4 leading-normal">
+                        "Khoảnh khắc bóng lăn vào lưới, cả cầu trường vỡ òa. Đó là cảm giác bạn không thể mua được qua
+                        màn hình TV."
+                    </p>
+                    <footer class="text-brand-gold font-semibold uppercase tracking-wider">— Chỉ có tại World Cup
+                    </footer>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: ULTIMATE CHECK-IN & FORM - Cái Kết Hoàn Hảo -->
+    <section class="relative py-24 overflow-hidden" id="register">
+        <!-- Background: Times Square at Night -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1534430480872-3498386e7856?q=80&w=2070&auto=format&fit=crop"
+                alt="Times Square Checkin" class="w-full h-full object-cover blur-sm opacity-40">
+            <div class="absolute inset-0 bg-brand-dark/80"></div>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10 grid md:grid-cols-2 gap-12 items-center">
+
+            <!-- Content Side -->
+            <div class="fade-in-up">
+                <span class="text-brand-gold font-bold tracking-wider text-sm uppercase mb-2 block">Dấu Ấn Để Đời</span>
+                <h2 class="font-display font-black text-4xl md:text-5xl mb-6">
+                    Mảnh Ghép Cuối Cùng Của <br> <span class="text-white">Giấc Mơ</span>
+                </h2>
+                <p class="text-gray-300 mb-8 text-lg">
+                    Kết thúc hành trình bằng bức ảnh check-in "triệu like" tại Times Square rực rỡ ánh đèn. Khẳng định
+                    bạn đã ở đó, đã sống trọn vẹn từng khoảnh khắc lịch sử.
+                </p>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-brand-gold mt-1 mr-3"></i>
+                        <span>Vé xem World Cup đảm bảo 100%</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-brand-gold mt-1 mr-3"></i>
+                        <span>Visa Mỹ tỉ lệ đậu chuyên gia</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-brand-gold mt-1 mr-3"></i>
+                        <span>Lịch trình tour VIP & linh hoạt</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Form Side -->
+            <div
+                class="bg-white/10 backdrop-blur-lg border border-white/20 p-8 rounded-3xl shadow-2xl fade-in-up delay-200">
+                <h3 class="font-display font-bold text-2xl mb-2 text-center">Đăng Ký Tư Vấn</h3>
+                <p class="text-gray-300 text-center mb-6 text-sm">Số lượng suất VIP có hạn. Đừng bỏ lỡ.</p>
+
+                <form class="space-y-4"
+                    onsubmit="event.preventDefault(); alert('Cảm ơn bạn! Chúng tôi sẽ liên hệ sớm nhất.');">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-1">Họ và tên</label>
+                        <input type="text"
+                            class="w-full bg-black/40 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors"
+                            placeholder="Nguyễn Văn A">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-1">Số điện thoại</label>
+                        <input type="tel"
+                            class="w-full bg-black/40 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors"
+                            placeholder="09xx xxx xxx">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-1">Email</label>
+                        <input type="email"
+                            class="w-full bg-black/40 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors"
+                            placeholder="email@example.com">
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-gradient-to-r from-brand-gold to-yellow-500 hover:from-yellow-400 hover:to-yellow-600 text-black font-bold py-4 rounded-lg shadow-lg transform transition hover:-translate-y-1 mt-4">
+                        GIỮ CHỖ NGAY HÔM NAY
+                    </button>
+                    <p class="text-xs text-center text-gray-500 mt-4">
+                        <i class="fas fa-lock mr-1"></i> Thông tin của bạn được bảo mật tuyệt đối.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t border-white/10">
+        <div class="container mx-auto px-4 text-center">
+            <h4 class="font-display font-bold text-2xl text-white mb-6">WC<span class="text-brand-gold">2026</span> TOUR
+            </h4>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors"><i
+                        class="fab fa-facebook-f text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors"><i
+                        class="fab fa-instagram text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors"><i
+                        class="fab fa-tiktok text-xl"></i></a>
+            </div>
+            <p class="text-gray-500 text-sm">
+                © 2025 World Cup 2026 Tour. All rights reserved. <br>
+                Được thiết kế để hiện thực hóa giấc mơ của bạn.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts for Interaction -->
+    <script>
+        // Simple Intersection Observer for Fade-in animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const elements = document.querySelectorAll('.fade-in-up');
+            elements.forEach(el => observer.observe(el));
+
+            // Header scroll effect
+            const header = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('py-2');
+                    header.classList.remove('py-3');
+                } else {
+                    header.classList.add('py-3');
+                    header.classList.remove('py-2');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
