@@ -14,7 +14,7 @@
 
     --c0: #FFFFFF;
     --c1: #10164F;
-    --c2: #FFCC05;
+    --c2: #FFB343;
     --c3: #000000;
     --c4: #EAEDFF;
     --c5: rgba(255, 255, 255, .3);
@@ -3973,9 +3973,9 @@
         align-items: flex-start;
     }
 
-    .s2-5 {
+    /* .s2-5 {
         display: none;
-    }
+    } */
 
     .s2-6 {
         width: calc(100% + 400rem);
