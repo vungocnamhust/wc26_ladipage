@@ -1,0 +1,168 @@
+/* Additional styling for Tour Consultation Form - Section S7 */
+
+/* Ensure form fields are visible against background */
+#section-form .textfield-input,
+#section-form .selector-holder-input {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    color: #10164F !important;
+    font-weight: 500;
+}
+
+#section-form .textfield-input::placeholder,
+#section-form .selector-holder-input::placeholder {
+    color: rgba(16, 22, 79, 0.6) !important;
+}
+
+#section-form .textfield-input:focus,
+#section-form .selector-holder-input:focus {
+    background-color: #ffffff !important;
+    border-color: #FFCC05 !important;
+    outline: none;
+}
+
+/* Date input styling */
+#section-form input[type="date"] {
+    color: #10164F !important;
+    cursor: pointer;
+}
+
+#section-form input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1) brightness(0.5);
+    cursor: pointer;
+}
+
+/* Number input arrows */
+#section-form input[type="number"]::-webkit-inner-spin-button,
+#section-form input[type="number"]::-webkit-outer-spin-button {
+    opacity: 1;
+}
+
+/* Selector dropdown styling */
+#section-form .selector-list {
+    background-color: #ffffff !important;
+    border: 2px solid #FFCC05 !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
+    margin-top: 8px;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+#section-form .selector-option-inner {
+    color: #10164F !important;
+    padding: 12px 20px !important;
+    transition: all 0.2s ease;
+}
+
+#section-form .selector-option-inner:hover {
+    background-color: #FFF9E6 !important;
+    border-left: 3px solid #FFCC05 !important;
+}
+
+/* Icon styling */
+#section-form .selector-holder-icon svg {
+    color: #10164F !important;
+}
+
+/* Button styling */
+#section-form .button__main {
+    background-color: #FFCC05 !important;
+    color: #10164F !important;
+    font-weight: 900 !important;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+#section-form .button__main:hover {
+    background-color: #FFD93D !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(255, 204, 5, 0.4);
+}
+
+/* Thank you message styling */
+#section-form.success .s7-5 {
+    display: block !important;
+}
+
+#section-form .s7-5 {
+    background-color: rgba(255, 204, 5, 0.95);
+    padding: 60px 40px;
+    border-radius: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#section-form .s7-5 h2 {
+    color: #10164F !important;
+}
+
+#section-form .s7-5 p {
+    color: #10164F !important;
+    font-size: 1.1rem;
+}
+
+/* Form validation states */
+#section-form .textfield-input:invalid:not(:placeholder-shown),
+#section-form .selector-holder-input:invalid:not(:placeholder-shown) {
+    border-color: #f44336 !important;
+}
+
+#section-form .textfield-input:valid:not(:placeholder-shown),
+#section-form .selector-holder-input:valid {
+    border-color: #4CAF50 !important;
+}
+
+/* Error message styling */
+#section-form .form-response {
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    #section-form .s7-1 {
+        width: 100% !important;
+    }
+
+    #section-form .s7-5 {
+        padding: 40px 20px;
+    }
+}
+
+/* Animation for form appearance */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#section-form .formbox {
+    animation: slideInUp 0.6s ease-out;
+}
+
+/* Scrollbar for selector dropdown */
+#section-form .selector-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+#section-form .selector-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+#section-form .selector-list::-webkit-scrollbar-thumb {
+    background: #FFCC05;
+    border-radius: 4px;
+}
+
+#section-form .selector-list::-webkit-scrollbar-thumb:hover {
+    background: #FFD93D;
+}
