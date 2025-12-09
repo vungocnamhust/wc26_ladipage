@@ -1,22 +1,5 @@
 @charset "UTF-8";
 
+/* Import Google Fonts - Both fonts support Vietnamese */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+Norge:wght@100..400&display=swap');
-
-@font-face {
-	font-family: 'FWC26';
-	src:
-		url('../fonts/FWC26-UltraCondensedBold.otf') format('opentype');
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'FWC26';
-	src:
-		url('../fonts/FWC26-NormalBlack.otf') format('opentype');
-	font-weight: 900;
-	font-style: normal;
-	font-display: swap;
-}
