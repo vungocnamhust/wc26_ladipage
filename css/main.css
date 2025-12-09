@@ -385,7 +385,7 @@
         line-height: 1.2;
         font-weight: 700;
         width: 100%;
-        font-family: 'FWC26', 'Noto Sans', sans-serif;
+        font-family: 'Playwrite Norge', 'Noto Sans', sans-serif;
     }
 
     .title {
@@ -674,7 +674,7 @@
 
     .selector-option {
         position: relative;
-        border-bottom: var(--sl) solid var(--c6);
+        border-bottom: var(--sl) solid var(--c1);
     }
 
     .selector-option:last-child {
@@ -1004,7 +1004,7 @@
 
     .fc-toolbar-title {
         font-weight: 900;
-        font-family: 'FWC26', 'Noto Sans', sans-serif;
+        font-family: 'Playwrite Norge', 'Noto Sans', sans-serif;
         text-transform: uppercase;
         font-size: var(--f-b);
     }
@@ -1122,7 +1122,7 @@
         padding-bottom: 20rem;
         text-align: center;
         font-weight: 900;
-        font-family: 'FWC26', 'Noto Sans', sans-serif;
+        font-family: 'Playwrite Norge', 'Noto Sans', sans-serif;
         text-transform: uppercase;
     }
 
@@ -1169,7 +1169,7 @@
 
     .fc th th {
         font-weight: 900;
-        font-family: 'FWC26', 'Noto Sans', sans-serif;
+        font-family: 'Playwrite Norge', 'Noto Sans', sans-serif;
         text-transform: uppercase;
         font-size: var(--f-xs);
         text-align: center;
@@ -1311,7 +1311,7 @@
 
     .popup-modal-header {
         font-weight: 900;
-        font-family: 'FWC26', 'Noto Sans', sans-serif;
+        font-family: 'Playwrite Norge', 'Noto Sans', sans-serif;
         text-transform: uppercase;
         font-size: var(--f-b);
         margin: 24rem 0 16rem;
