@@ -13,7 +13,7 @@
 
 
     --c0: #FFFFFF;
-    --c1: #10164F;
+    --c1: #000000;
     --c2: #FFB343;
     --c3: #000000;
     --c4: #EAEDFF;
@@ -2183,7 +2183,7 @@
 
     .s4-4__b .s4-7.disabled .s4-7-1,
     .s4-4__c .s4-7.disabled .s4-7-1 {
-        color: var(--c5);
+        color: var(--c0);
     }
 
     .s4-7.disabled .s4-7-2 {

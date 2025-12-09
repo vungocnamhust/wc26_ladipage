@@ -983,12 +983,19 @@ M23.175 192.514L22.295 192.866L20.039 189.618H18.551V199.474L20.343 199.938L19.8
 							<div class="s2-7">
 								<div class="s2-7-1">
 									<div class="title title__default desktop">
-										<div class="mask-appear">
-											KỲ WORLD CUP ĐẶC BIỆT NHẤT LỊCH SỬ </div>
+										<div class="mask-appear hidden" style="min-width: 800px;"><span
+												class="mask-appear-wrapper"><span class="mask-appear-inner"
+													style="transition-delay: 0.5s;">WORLD CUP ĐẶC
+												</span></span><span class="mask-appear-wrapper"><span
+													class="mask-appear-inner"
+													style="transition-delay: 0.65s;">BIỆT&nbsp;NHẤT&nbsp;LỊCH&nbsp;SỬ</span></span>
+										</div>
 									</div>
 									<div class="title title__default mobile">
-										<div class="mask-appear">
-											KỲ WORLD CUP ĐẶC BIỆT NHẤT LỊCH SỬ </div>
+										<div class="mask-appear hidden" style="min-width: 0px;"><span
+												class="mask-appear-wrapper"><span class="mask-appear-inner"
+													style="transition-delay: 0.5s;">WORLD CUP ĐẶC BIỆT NHẤT LỊCH SỬ
+												</span></span></div>
 									</div>
 								</div>
 								<div class="s2-7-2">
@@ -1117,7 +1124,7 @@ M23.175 192.514L22.295 192.866L20.039 189.618H18.551V199.474L20.343 199.938L19.8
 									<span class="mobile">6:00 PM EST</span>
 								</div>
 
-								<div class="s4-6 altfont">Brazil v. Morocco</div>
+								<div class="s4-6 altfont">Brazil với Morocco</div>
 								<div class="s4-7 disabled">
 									<div class="s4-7-1">Thông tin về di chuyển sẽ được cập nhật</div>
 									<div class="s4-7-2">
@@ -1136,7 +1143,7 @@ M23.175 192.514L22.295 192.866L20.039 189.618H18.551V199.474L20.343 199.938L19.8
 									<span class="mobile">3:00 PM EST</span>
 								</div>
 
-								<div class="s4-6 altfont">France v. Senegal</div>
+								<div class="s4-6 altfont">France với Senegal</div>
 								<div class="s4-7 disabled">
 									<div class="s4-7-1">Thông tin về di chuyển sẽ được cập nhật</div>
 									<div class="s4-7-2">
@@ -1155,7 +1162,7 @@ M23.175 192.514L22.295 192.866L20.039 189.618H18.551V199.474L20.343 199.938L19.8
 									<span class="mobile">8:00 PM EST</span>
 								</div>
 
-								<div class="s4-6 altfont">Norway v. Senegal</div>
+								<div class="s4-6 altfont">Norway với Senegal</div>
 								<div class="s4-7 disabled">
 									<div class="s4-7-1">Thông tin về di chuyển sẽ được cập nhật</div>
 									<div class="s4-7-2">
@@ -1174,9 +1181,9 @@ M23.175 192.514L22.295 192.866L20.039 189.618H18.551V199.474L20.343 199.938L19.8
 									<span class="mobile">4:00 PM EST</span>
 								</div>
 
-								<div class="s4-6 altfont">Ecuador v. Germany</div>
+								<div class="s4-6 altfont">Ecuador với Germany</div>
 								<div class="s4-7 disabled">
-									<div class="s4-7-1">Transportation Info Coming Soon</div>
+									<div class="s4-7-1">Thông tin về di chuyển sẽ được cập nhật</div>
 									<div class="s4-7-2">
 										<svg class="icon">
 											<use xlink:href="#i-ticket"></use>
@@ -1193,7 +1200,7 @@ M23.175 192.514L22.295 192.866L20.039 189.618H18.551V199.474L20.343 199.938L19.8
 									<span class="mobile"></span>
 								</div>
 
-								<div class="s4-6 altfont">ROUND OF 32</div>
+								<div class="s4-6 altfont">VÒNG ĐẤU 32 ĐỘI</div>
 								<div class="s4-7 disabled">
 									<div class="s4-7-1">Thông tin về di chuyển sẽ được cập nhật</div>
 									<div class="s4-7-2">
@@ -1212,7 +1219,7 @@ M23.175 192.514L22.295 192.866L20.039 189.618H18.551V199.474L20.343 199.938L19.8
 									<span class="mobile"></span>
 								</div>
 
-								<div class="s4-6 altfont">ROUND OF 16</div>
+								<div class="s4-6 altfont">TỨ KẾT</div>
 								<div class="s4-7 disabled">
 									<div class="s4-7-1">Thông tin về di chuyển sẽ được cập nhật</div>
 									<div class="s4-7-2">
@@ -2525,7 +2532,7 @@ So now that we know… what group are you most excited to see?
 					}
 				});
 				document.addEventListener('wpcf7mailsent', function (ev) {
-					var $form = $(ev.target);
+					var $form = $(evớitarget);
 					$form.find('.js-selector-value').val('');
 					$form.find('[name="your-select"]').val('');
 					$form.find('.js-selector').removeClass('open');
