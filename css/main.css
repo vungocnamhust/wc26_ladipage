@@ -2079,13 +2079,13 @@
     }
 
     .s3-5-1 {
-        background-image: url(../img/timer-top-a.svg);
+        background-image: url(../images/timer-top-a.svg);
         background-position: top;
         top: 0;
     }
 
     .s3-6-1 {
-        background-image: url(../img/timer-bottom-a.svg);
+        background-image: url(../images/timer-bottom-a.svg);
         background-position: bottom;
         bottom: 0;
     }
@@ -3583,10 +3583,10 @@
         --f-b1: 36rem;
         --f-b2: 20rem;
         --f-b3: 18rem;
-        --f-l: 50rem;
-        --f-xl: 45rem;
-        --f-xl1: 64rem;
-        --f-xxl: 70rem;
+        --f-l: 40rem;
+        --f-xl: 36rem;
+        --f-xl1: 50rem;
+        --f-xxl: 56rem;
 
         --mw: 680px;
 
