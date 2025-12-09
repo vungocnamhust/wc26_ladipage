@@ -1168,7 +1168,7 @@ M23.175 192.514L22.295 192.866L20.039 189.618H18.551V199.474L20.343 199.938L19.8
 									<span class="mobile">6:00 PM New York</span>
 								</div>
 
-								<div class="s4-6 altfont">Brazil với Ma-rốc</div>
+								<div class="s4-6 altfont">Brazil vs Ma-rốc</div>
 								<div class="s4-7 disabled">
 									<div class="s4-7-1">New York, New Jersey</div>
 									<div class="s4-7-2">
@@ -1187,7 +1187,7 @@ M23.175 192.514L22.295 192.866L20.039 189.618H18.551V199.474L20.343 199.938L19.8
 									<span class="mobile">13:00 Dallas</span>
 								</div>
 
-								<div class="s4-6 altfont">Argentina với Áo</div>
+								<div class="s4-6 altfont">Argentina vs Áo</div>
 								<div class="s4-7 disabled">
 									<div class="s4-7-1">Dallas, Texas</div>
 									<div class="s4-7-2">
@@ -1206,7 +1206,7 @@ M23.175 192.514L22.295 192.866L20.039 189.618H18.551V199.474L20.343 199.938L19.8
 									<span class="mobile">19:30 Miami</span>
 								</div>
 
-								<div class="s4-6 altfont">Colombia với Bồ Đào Nha</div>
+								<div class="s4-6 altfont">Colombia vs Bồ Đào Nha</div>
 								<div class="s4-7 disabled">
 									<div class="s4-7-1">Miami, Florida</div>
 									<div class="s4-7-2">
@@ -1282,7 +1282,7 @@ M23.175 192.514L22.295 192.866L20.039 189.618H18.551V199.474L20.343 199.938L19.8
 									<svg class="icon" style="width: 20px; height: 20px;">
 										<use xlink:href="#i-download"></use>
 									</svg>
-									<span class="button-text altfont">TẢI LỊCH THI ĐẤU</span>
+									<span class="button-text altfont">TẢI LỊCH THI ĐẤU ĐẦY ĐỦ</span>
 								</a>
 							</div>
 
@@ -1517,7 +1517,7 @@ M23.175 192.514L22.295 192.866L20.039 189.618H18.551V199.474L20.343 199.938L19.8
 														</div>
 														<div class="selector-option">
 															<div class="selector-option-inner js-selector-option fill"
-																data-value="Tư vấn gói tour khác">
+																data-value="Tư vấn thiết kế tour theo yêu cầu">
 																Tư vấn gói tour khác
 															</div>
 														</div>
@@ -1578,7 +1578,7 @@ M23.175 192.514L22.295 192.866L20.039 189.618H18.551V199.474L20.343 199.938L19.8
 				// Google Sheets Integration với Debug Logging
 				// ============================================
 
-				const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzJ6SBTH4iLeVr_9pYaY4G0kH30NVUXAB3Ty9MR58KXBZWD6Gcoe2FdHi-ete8AtLo7YQ/exec';
+				const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwN3NOHOA-Z8sNZUgNgvPwliBOD-L6AQhY9FXly4O3SZKj2jzfOSM7pad-alGvY-9kbTg/exec';
 
 				// Debug flag - set to false để tắt logging trong production
 				const DEBUG_MODE = true;
@@ -1603,14 +1603,14 @@ M23.175 192.514L22.295 192.866L20.039 189.618H18.551V199.474L20.343 199.938L19.8
 					const formData = new FormData(this);
 
 					const data = {
+						timestamp: new Date().toISOString(),
 						fullname: formData.get('fullname'),
 						phone: formData.get('phone'),
 						email: formData.get('email'),
-						participants: formData.get('participants'),
 						tour_package: formData.get('tour_package'),
+						participants: formData.get('participants'),
 						departure_date: formData.get('departure_date'),
 						notes: formData.get('notes'),
-						timestamp: new Date().toISOString()
 					};
 
 					debugLog('Step 1 ✅: Form data collected', data);
