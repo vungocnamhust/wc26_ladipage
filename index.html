@@ -512,6 +512,9 @@
 
 	<script> (function () { var s = document.createElement('script'); var h = document.querySelector('head') || document.body; s.src = 'https://acsbapp.com/apps/app/dist/js/app.js'; s.async = true; s.onload = function () { acsbJS.init({ statementLink: '', footerHtml: 'Web Accessibility by DD.NYC®', hideMobile: false, hideTrigger: false, disableBgProcess: false, language: 'en', position: 'left', leadColor: '#000000', triggerColor: '#000000', triggerRadius: '50%', triggerPositionX: 'right', triggerPositionY: 'bottom', triggerIcon: 'people', triggerSize: 'medium', triggerOffsetX: 40, triggerOffsetY: 40, mobile: { triggerSize: 'small', triggerPositionX: 'right', triggerPositionY: 'center', triggerOffsetX: 10, triggerOffsetY: 0, triggerRadius: '50%' } }); }; h.appendChild(s); })(); </script>
 
+	<!-- SweetAlert2 for beautiful alerts -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+
 </head>
 
 <body class="document loading">
@@ -675,84 +678,34 @@
 					<div class="topbar-nav topbar-nav__left desktop">
 						<div class="topbar-nav topbar-nav__left desktop">
 							<ul>
-								<li class="dropdown">
-									<a href="/about/" class="fill" target="">About</a>
-
-									<span class="dropdown-icon">
-										<svg class="icon">
-											<use xlink:href="#i-arrow-down"></use>
-										</svg>
-									</span>
-									<ul>
-										<li><a href="/about/#our-mission" data-target="#our-mission">Our Mission</a>
-										</li>
-										<li><a href="/about/#our-team" data-target="#our-team">Our Team</a></li>
-										<li><a href="/about/#welcome-world-foundation"
-												data-target="#welcome-world-foundation">Welcome World Foundation</a>
-										</li>
-										<li><a href="/about/#nynj-poster" data-target="#nynj-poster">NYNJ Poster</a>
-										</li>
-										<li><a href="/about/#nynj-sonic-id" data-target="#nynj-sonic-id">NYNJ Sonic
-												ID</a></li>
-										<li><a href="/vendor-opportunities/">Vendor Interest Form</a></li>
-									</ul>
+								<li>
+									<a href="https://capellatravel.com" class="fill" target="_blank"
+										rel="noopener">About</a>
 								</li>
 								<li>
-									<a href="/schedule/" class="fill" target="">Schedule</a>
-
+									<a href="#section-about" class="fill">Worldcup 2026</a>
 								</li>
-								<li class="dropdown">
-									<a href="/venues/" class="fill" target="">Venues</a>
-
-									<span class="dropdown-icon">
-										<svg class="icon">
-											<use xlink:href="#i-arrow-down"></use>
-										</svg>
-									</span>
-									<ul>
-										<li><a href="/venues/#nynj-stadium" data-target="#nynj-stadium">New York New
-												Jersey
-												Stadium</a></li>
-										<li><a href="/venues/#team-base-camps" data-target="#team-base-camps">Team Base
-												Camps</a></li>
-									</ul>
+								<li>
+									<a href="#section-schedule" class="fill">Lịch Thi Đấu</a>
 								</li>
-								<li class="dropdown">
-									<a href="/destination/" class="fill" target="">DESTINATION NYNJ</a>
-
-									<span class="dropdown-icon">
-										<svg class="icon">
-											<use xlink:href="#i-arrow-down"></use>
-										</svg>
-									</span>
-									<ul>
-										<li><a href="/destination/#plan-your-trip" data-target="#plan-your-trip">Plan
-												Your Trip</a></li>
-										<li><a href="/destination/#accommodations"
-												data-target="#accommodations">Accommodations</a></li>
-										<li><a href="/destination/#local-transit-agencies"
-												data-target="#local-transit-agencies">Local Transit Agencies</a></li>
-										<li><a href="/destination/#events-and-toolkit"
-												data-target="#events-and-toolkit">Community Events and Toolkit</a></li>
-									</ul>
+								<li>
+									<a href="#section-news" class="fill">Tour</a>
 								</li>
-								<li class="dropdown">
-									<a href="/fan-festival/" class="fill" target="">Fan Festival</a>
-
-									<span class="dropdown-icon">
-										<svg class="icon">
-											<use xlink:href="#i-arrow-down"></use>
+								<li>
+									<a href="#section-form" class="fill">Đăng Ký</a>
+								</li>
+								<li style="margin-left: auto;">
+									<a href="tel:+84123456789" class="button button__main"
+										style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 20px; background-color: var(--c2);">
+										<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+											viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+											stroke-linecap="round" stroke-linejoin="round">
+											<path
+												d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+											</path>
 										</svg>
-									</span>
-									<ul>
-										<li><a href="/fan-festival/">FIFA Fan Festival™ NYNJ</a></li>
-										<li><a href="/fan-festival/#fan-village" data-target="#fan-village">NYNJ World
-												Cup Fan Village</a></li>
-										<li><a href="/fan-festival/#fan-zones" data-target="#fan-zones">Official Fan
-												Zones</a></li>
-										<li><a href="/fan-festival/#road-tour" data-target="#road-tour">Skyline to
-												Shoreline Road Tour™</a></li>
-									</ul>
+										<span class="altfont">Liên Hệ</span>
+									</a>
 								</li>
 							</ul>
 						</div>
@@ -811,36 +764,6 @@ M10.0035 214.783C10.7575 214.783 11.635 214.88 12.636 215.075C13.65 215.27 14.39
 
 					<div class="topbar-nav topbar-nav__right desktop">
 						<ul>
-							<li class="dropdown">
-								<a href="/transportation/" class="fill" target="">Transportation</a>
-
-								<span class="dropdown-icon">
-									<svg class="icon">
-										<use xlink:href="#i-arrow-down"></use>
-									</svg>
-								</span>
-								<ul>
-									<li><a href="/getting-to-nynj-stadium/">Getting to NYNJ Stadium</a></li>
-									<li><a href="/getting-to-fifa-fan-festival-nynj">Getting to FIFA Fan Festival™
-											NYNJ</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="/partners/" target="">Partners</a>
-							</li>
-							<li>
-								<a href="/news/" target="">News</a>
-							</li>
-							<li>
-								<a href="/faq/" target="">FAQ</a>
-							</li>
-							<li>
-								<a href="https://store.fifa.com/content/new-york-new-jersey-2026-host-city"
-									target="_blank">Shop</a>
-							</li>
-							<li>
-								<a href="https://www.fifa.com/" target="_blank">FIFA</a>
-							</li>
 						</ul>
 					</div>
 					<div class="topbar-nav mobile">
@@ -1024,10 +947,10 @@ M23.175 192.514L22.295 192.866L20.039 189.618H18.551V199.474L20.343 199.938L19.8
 								<div class="s2-7-2">
 									<p>Hòa nhịp cùng những trận cầu đỉnh cao tại các thành phố của Mỹ như New York,
 										Dallas,
-										Miami... hít thở bầu không khí bên hồ lá phong Canada đắm mình trong giai điệu
+										Miami... hít thở bầu không khí bên hồ lá phong Canada, đắm mình trong giai điệu
 										Latin
 										và ẩm thực nồng nàn Mexico. Sống trọn khoảnh khắc cùng đội bóng yêu thích ngay
-										như trên khán đài và có một kỳ nghỉ không thể nào quên.</p>
+										trên khán đài và có một kỳ nghỉ không thể nào quên.</p>
 								</div>
 							</div>
 						</div>
@@ -1143,7 +1066,7 @@ M23.175 192.514L22.295 192.866L20.039 189.618H18.551V199.474L20.343 199.938L19.8
 						<div class="s4-2">
 							<div class="s4-2-1">
 								<div class="title title__default">
-									<h2>LỊCH THI ĐẤU WORLD CUP 2026</h2>
+									<h2>TRẬN ĐẤU NỔI BẬT FIFA WORLD CUP 2026</h2>
 								</div>
 							</div>
 							<div class="s4-2-2">
@@ -1575,145 +1498,141 @@ M23.175 192.514L22.295 192.866L20.039 189.618H18.551V199.474L20.343 199.938L19.8
 
 			<script>
 				// ============================================
-				// Google Sheets Integration với Debug Logging
+				// Google Sheets Integration với Debug Logging + SweetAlert2
 				// ============================================
 
-				const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwN3NOHOA-Z8sNZUgNgvPwliBOD-L6AQhY9FXly4O3SZKj2jzfOSM7pad-alGvY-9kbTg/exec';
+				const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwhKMEq5wiKWxINLiY9E8TlG_8pPTdUKUNlg9aRUflispSvNv95Bg6pIRB2SPhO5Upn4w/exec';
 
 				// Debug flag - set to false để tắt logging trong production
 				const DEBUG_MODE = true;
 
-				function debugLog(message, data = null) {
-					if (!DEBUG_MODE) return;
+				const form = document.getElementById('tour-consultation-form');
+				const debugArea = document.getElementById('debug-output');
+				const curlContent = document.getElementById('curl-content');
 
-					const timestamp = new Date().toLocaleTimeString('vi-VN');
-					console.log(`[${timestamp}] 🔍 FORM DEBUG:`, message);
+				// function debugLog(message, data = null) {
+				// 	if (!DEBUG_MODE) return;
 
-					if (data !== null) {
-						console.log('📦 Data:', data);
-					}
-				}
+				// 	const timestamp = new Date().toLocaleTimeString('vi-VN');
+				// 	console.log(`[${timestamp}] 🔍 FORM DEBUG:`, message);
 
-				document.getElementById('tour-consultation-form').addEventListener('submit', async function (e) {
+				// 	if (data !== null) {
+				// 		console.log('📦 Data:', data);
+				// 	}
+				// }
+
+				form.addEventListener('submit', async function (e) {
 					e.preventDefault();
-					debugLog('Form submit triggered');
+					// debugLog('Form submit triggered');
 
-					// Step 1: Thu thập dữ liệu từ form
-					debugLog('Step 1: Collecting form data...');
-					const formData = new FormData(this);
+					// // 1. Thu thập dữ liệu từ form
+					// debugLog('Step 1: Collecting form data...');
+					// const formData = new FormData(this);
 
-					const data = {
-						timestamp: new Date().toISOString(),
-						fullname: formData.get('fullname'),
-						phone: formData.get('phone'),
-						email: formData.get('email'),
-						tour_package: formData.get('tour_package'),
-						participants: formData.get('participants'),
-						departure_date: formData.get('departure_date'),
-						notes: formData.get('notes'),
-					};
+					// // 1.5. Format timestamp và departure_date
+					// debugLog('Step 1.5: Formatting dates...');
 
-					debugLog('Step 1 ✅: Form data collected', data);
-
-					// Step 2: Validate dữ liệu
-					debugLog('Step 2: Validating required fields...');
-					const requiredFields = ['fullname', 'phone', 'email', 'participants', 'tour_package'];
-					const missingFields = requiredFields.filter(field => !data[field]);
-
-					if (missingFields.length > 0) {
-						debugLog('Step 2 ❌: Validation failed - missing fields:', missingFields);
-						alert('Vui lòng điền đầy đủ thông tin bắt buộc: ' + missingFields.join(', '));
-						return;
+					// Function để format ngày theo định dạng DD/MM/YYYY HH:mm:ss
+					function formatDateTime(date) {
+						const day = String(date.getDate()).padStart(2, '0');
+						const month = String(date.getMonth() + 1).padStart(2, '0');
+						const year = date.getFullYear();
+						const hours = String(date.getHours()).padStart(2, '0');
+						const minutes = String(date.getMinutes()).padStart(2, '0');
+						const seconds = String(date.getSeconds()).padStart(2, '0');
+						return `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
 					}
-					debugLog('Step 2 ✅: All required fields validated');
 
-					const responseDiv = this.querySelector('.form-response');
+					// Function để format ngày theo định dạng DD/MM/YYYY
+					function formatDate(dateString) {
+						if (!dateString) return '';
+						const date = new Date(dateString);
+						const day = String(date.getDate()).padStart(2, '0');
+						const month = String(date.getMonth() + 1).padStart(2, '0');
+						const year = date.getFullYear();
+						return `${day}/${month}/${year}`;
+					}
+
+					// Thêm timestamp với định dạng DD/MM/YYYY HH:mm:ss
+					const timestamp = formatDateTime(new Date());
+					formData.set('timestamp', timestamp);
+
+					// Format departure_date nếu có
+					const departureDateRaw = formData.get('departure_date');
+					if (departureDateRaw) {
+						const departureDateFormatted = formatDate(departureDateRaw);
+						formData.set('departure_date', departureDateFormatted);
+					}
+
+					// debugLog('Formatted timestamp:', timestamp);
+					// debugLog('Formatted departure_date:', formData.get('departure_date'));
+
+					// ---------------------------------------------------------
+					// LOGGING & DEBUGGING - Generate CURL Command
+					// ---------------------------------------------------------
+					console.group('🚀 START FORM SUBMISSION');
+
+					// In ra từng field để kiểm tra
+					console.log('📋 Form Data Values:');
+					let curlCommand = `curl -L -X POST "${GOOGLE_SCRIPT_URL}"`;
+
+					for (let pair of formData.entries()) {
+						console.log(`   👉 ${pair[0]}: ${pair[1]}`);
+						// Xây dựng lệnh CURL
+						curlCommand += ` \\\n     -F "${pair[0]}=${pair[1]}"`;
+					}
+
+					console.log('💻 Generated CURL Command:');
+					console.log(curlCommand);
+
+					// Hiển thị CURL ra màn hình HTML
+					debugArea.style.display = 'block';
+					curlContent.innerText = curlCommand;
+
+					console.groupEnd();
+					// ---------------------------------------------------------
+
+					// 2. Gửi dữ liệu (Fetch API)
+					// debugLog('Step 2: Sending request to Google Apps Script...');
 
 					try {
-						// Step 3: Chuẩn bị request
-						debugLog('Step 3: Preparing request to Google Sheets...');
-						debugLog('Target URL:', GOOGLE_SCRIPT_URL);
-
-						const requestOptions = {
+						const response = await fetch(GOOGLE_SCRIPT_URL, {
 							method: 'POST',
-							mode: 'no-cors',
-							headers: {
-								'Content-Type': 'application/json',
-							},
-							body: JSON.stringify(data)
-						};
-						debugLog('Request options:', requestOptions);
-						debugLog('Request body (stringified):', JSON.stringify(data));
-
-						// Step 4: Gửi request
-						debugLog('Step 4: Sending request to Google Apps Script...');
-						const startTime = performance.now();
-
-						const response = await fetch(GOOGLE_SCRIPT_URL, requestOptions);
-
-						const endTime = performance.now();
-						const duration = (endTime - startTime).toFixed(2);
-
-						debugLog(`Step 4 ✅: Request completed in ${duration}ms`);
-						debugLog('Response object:', {
-							type: response.type,
-							status: response.status,
-							statusText: response.statusText,
-							ok: response.ok,
-							redirected: response.redirected,
-							url: response.url
+							body: formData
 						});
 
-						// Note: Với mode: 'no-cors', response sẽ là opaque và không có body
-						debugLog('ℹ️ Note: Using no-cors mode - response is opaque (no readable body)');
+						console.log('✅ Response Status:', response.status);
+						// debugLog('Step 2 ✅: Request completed successfully');
 
-						// Step 5: Show success message
-						debugLog('Step 5: Showing success message...');
-						document.querySelector('.s7-1').style.display = 'none';
-						document.querySelector('.s7-5').style.display = 'block';
-						document.querySelector('#section-form').classList.add('success');
-						debugLog('Step 5 ✅: Success UI updated');
+						// 3. Hiển thị thông báo thành công với SweetAlert2
+						swal('Thành công', 'Chúng tôi đã nhận được thông tin của bạn!', 'success');
 
-						// Step 6: Reset form
-						debugLog('Step 6: Resetting form...');
-						this.reset();
-						debugLog('Step 6 ✅: Form reset');
+						// 4. Reset form và ẩn debug area sau 5 giây
+						form.reset();
+						setTimeout(() => {
+							debugArea.style.display = 'none';
+						}, 5000);
 
-						// Step 7: Scroll to thank you message
-						debugLog('Step 7: Scrolling to thank you message...');
-						document.querySelector('#section-form').scrollIntoView({ behavior: 'smooth' });
-						debugLog('Step 7 ✅: Scroll completed');
-
-						debugLog('🎉 FORM SUBMISSION SUCCESSFUL!');
+						// debugLog('🎉 FORM SUBMISSION SUCCESSFUL!');
 						console.log('═══════════════════════════════════════════');
 
 					} catch (error) {
-						// Error handling với chi tiết debug
-						debugLog('❌ ERROR: Form submission failed');
+						// Error handling
+						// debugLog('❌ ERROR: Form submission failed');
 						console.error('Error type:', error.name);
 						console.error('Error message:', error.message);
 						console.error('Error stack:', error.stack);
 
-						// Hiển thị error cho user
-						responseDiv.style.display = 'block';
-						responseDiv.style.backgroundColor = '#f44336';
-						responseDiv.style.color = 'white';
-						responseDiv.textContent = 'Có lỗi xảy ra. Vui lòng thử lại sau.';
-
-						// Log chi tiết error
-						debugLog('Error details:', {
-							name: error.name,
-							message: error.message,
-							timestamp: new Date().toISOString()
-						});
+						// Hiển thị error với SweetAlert2
+						swal('Lỗi', 'Không thể gửi dữ liệu, vui lòng thử lại.', 'error');
 
 						console.log('═══════════════════════════════════════════');
 					}
 				});
 
 				// Log khi script được load
-				debugLog('✅ Form script initialized successfully');
-				debugLog('Google Script URL configured:', GOOGLE_SCRIPT_URL);
+				// debugLog('✅ Form script initialized successfully');
+				// debugLog('Google Script URL configured:', GOOGLE_SCRIPT_URL);
 				console.log('═══════════════════════════════════════════');
 			</script>
 
@@ -2035,95 +1954,7 @@ M23.175 192.514L22.295 192.866L20.039 189.618H18.551V199.474L20.343 199.938L19.8
 		</div>
 
 		<div class="footer-section">
-			<h2></h2>
-			<div class="s20">
-				<div class="wrapper">
-					<div class="s20-1">
-						<div class="s20-2">
-							<img src="images/2025/10/Frame-1-1.svg" alt="">
-						</div>
-						<div class="s20-3 desktop">
-							<div class="s20-4">
-								<div class="s20-4-2">
-									<a href="https://www.onyxequities.com/" target="_blank" class="fill">
-										<img src="images/2025/11/Onyx-w.svg" alt="">
-									</a>
-								</div>
-							</div>
-							<div class="s20-4">
-								<div class="s20-4-2">
-									<a href="https://www.paulweiss.com/" target="_blank" class="fill">
-										<img src="images/2025/11/PaulWeiss-with-border.svg" alt="">
-									</a>
-								</div>
-							</div>
-							<div class="s20-4">
-								<div class="s20-4-2">
-									<a href="https://nj.pseg.com/" target="_blank" class="fill">
-										<img src="images/2025/12/PSEG-logo-White-CMYK-1-1.webp" alt="">
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="s20-3 mobile">
-							<div class="carousel swiper">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<div class="s20-4">
-											<div class="s20-4-2">
-												<a href="https://www.onyxequities.com/" target="_blank" class="fill">
-													<img src="images/2025/11/Onyx-w.svg" alt="">
-												</a>
-											</div>
-											<div class="s20-4-1">
-												<span>
-													<svg class="icon">
-														<use xlink:href="#i-arrow-top-right"></use>
-													</svg>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="s20-4">
-											<div class="s20-4-2">
-												<a href="https://www.paulweiss.com/" target="_blank" class="fill">
-													<img src="images/2025/11/PaulWeiss-with-border.svg" alt="">
-												</a>
-											</div>
-											<div class="s20-4-1">
-												<span>
-													<svg class="icon">
-														<use xlink:href="#i-arrow-top-right"></use>
-													</svg>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="s20-4">
-											<div class="s20-4-2">
-												<a href="https://nj.pseg.com/" target="_blank" class="fill">
-													<img src="images/2025/12/PSEG-logo-White-CMYK-1-1.webp" alt="">
-												</a>
-											</div>
-											<div class="s20-4-1">
-												<span>
-													<svg class="icon">
-														<use xlink:href="#i-arrow-top-right"></use>
-													</svg>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="cookie" id="cookie-banner">
+			<!-- <div class="cookie" id="cookie-banner">
 				<div class="cookie-wrapper">
 					<div class="cookie-content">
 						By clicking “Accept Cookies”, you agree to the storing of cookies on your device to enhance site
@@ -2135,177 +1966,17 @@ M23.175 192.514L22.295 192.866L20.039 189.618H18.551V199.474L20.343 199.938L19.8
 						</button>
 					</div>
 				</div>
-			</div>
+			</div> -->
 
 
 			<div class="footer">
 				<div class="wrapper">
 					<div class="footer-grid">
-						<div class="footer-form">
-							<div class="footer-form-caption">
-								<div class="title title__small">
-									<h2>Subscribe to Our Newsletter</h2>
-								</div>
-							</div>
-							<div class="footer-form-wrapper feedback-container form-footer__class">
-
-								<div class="wpcf7 no-js" id="wpcf7-f130-o2" lang="en-US" dir="ltr" data-wpcf7-id="130">
-									<div class="screen-reader-response">
-										<p role="status" aria-live="polite" aria-atomic="true">
-										<ul></ul>
-									</div>
-									<form action="/#wpcf7-f130-o2" method="post" class="wpcf7-form init"
-										aria-label="Contact form" novalidate="novalidate" data-status="init">
-										<fieldset class="hidden-fields-container"><input type="hidden" name="_wpcf7"
-												value="130" /><input type="hidden" name="_wpcf7_version"
-												value="6.1.4" /><input type="hidden" name="_wpcf7_locale"
-												value="en_US" /><input type="hidden" name="_wpcf7_unit_tag"
-												value="wpcf7-f130-o2" /><input type="hidden"
-												name="_wpcf7_container_post" value="0" /><input type="hidden"
-												name="_wpcf7_posted_data_hash" value="" /><input type="hidden"
-												name="_wpcf7_recaptcha_response" value="" />
-										</fieldset>
-										<div class="footer-form-container">
-											<div class="footer-form-cell footer-form-cell__input">
-												<div class="textfield">
-													<span class="wpcf7-form-control-wrap" data-name="your-email"><input
-															size="40" maxlength="400"
-															class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email textfield-input"
-															autocomplete="email" aria-required="true"
-															aria-invalid="false" placeholder="E-mail" value=""
-															type="email" name="your-email" /></span>
-
-												</div>
-											</div>
-											<div class="footer-form-cell footer-form-cell__button">
-												<button type="submit" class="button button__secondary wpcf7-submit">
-													<span class="button-text">Subscribe</span>
-												</button>
-
-											</div>
-											<div style="display: none;">
-												<input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden"
-													name="utm_id" />
-												<input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden"
-													name="utm_source" />
-												<input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden"
-													name="utm_medium" />
-												<input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden"
-													name="utm_campaign" />
-												<input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden"
-													name="utm_term" />
-												<input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden"
-													name="utm_content" />
-												<input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden"
-													name="urll" />
-												<input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden"
-													name="urlback" />
-												<input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden"
-													name="ipdetails" />
-												<input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden"
-													name="dataclient" />
-												<input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden"
-													name="timeclient" />
-												<input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden"
-													name="linkcontact" />
-											</div>
-											<div class="footer-form-cell footer-form-cell__message">
-												<div class="footer-form-message">
-													Thank you!
-
-												</div>
-											</div>
-										</div>
-										<div class="wpcf7-response-output" aria-hidden="true"></div>
-									</form>
-								</div>
-							</div>
-						</div>
-						<div class="footer-nav">
-							<div class="footer-nav-col">
-								<div class="footer-nav-title">Navigation</div>
-								<ul>
-									<li>
-										<a href="/schedule/">Schedule</a>
-
-									</li>
-									<li>
-										<a href="/venues/">Venues</a>
-
-									</li>
-									<li>
-										<a href="/destination/">Destination NYNJ</a>
-
-									</li>
-									<li>
-										<a href="/about/">About</a>
-
-									</li>
-									<li>
-										<a href="/partners/">Partners</a>
-
-									</li>
-									<li>
-										<a href="/news/">News</a>
-
-									</li>
-									<li>
-										<a href="/faq/">FAQ</a>
-
-									</li>
-									<li>
-										<a
-											href="https://store.fifa.com/content/new-york-new-jersey-2026-host-city">Shop</a>
-
-									</li>
-									<li>
-										<a href="https://www.fifa.com/">FIFA</a>
-
-									</li>
-								</ul>
-							</div>
-							<div class="footer-nav-col">
-								<div class="footer-nav-title">Social Media</div>
-								<ul>
-									<li>
-										<a target="_blank" href="https://www.instagram.com/fwc26nynj/">Instagram</a>
-									</li>
-									<li>
-										<a target="_blank"
-											href="https://www.linkedin.com/company/fwc26nynj/">LinkedIn</a>
-									</li>
-									<li>
-										<a target="_blank" href="https://www.tiktok.com/@fwc26nynj">TikTok</a>
-									</li>
-									<li>
-										<a target="_blank" href="https://www.facebook.com/FWC26NYNJ">Facebook</a>
-									</li>
-									<li>
-										<a target="_blank" href="https://x.com/FWC26NYNJ">X</a>
-									</li>
-								</ul>
-							</div>
-							<div class="footer-nav-col">
-								<div class="footer-nav-title">Policy</div>
-								<ul>
-									<li>
-										<a href="/terms-conditions/">Terms & Conditions</a>
-
-									</li>
-									<li>
-										<a href="/privacy-policy/">Privacy Policy</a>
-
-									</li>
-									<li><span class="website-accessibility" data-acsb-custom-trigger="true" tabindex="0"
-											role="button">Website Accessibility</span></li>
-								</ul>
-							</div>
-						</div>
 
 						<div class="footer-runner">
 							<div class="marquee">
 								<div class="marquee-container">
-									<img src="images/2025/06/footer-runner-text.svg" alt="FIFA World Cup 2026™ NYNJ">
+									<img src="images/footer-runner-text.svg" alt="Capella Travel">
 								</div>
 							</div>
 						</div>
@@ -2314,27 +1985,8 @@ M23.175 192.514L22.295 192.866L20.039 189.618H18.551V199.474L20.343 199.938L19.8
 
 					<div class="bottombar">
 						<div class="bottombar-copyright">
-							<p>&copy;2026 Worldcup 2026 2026 World Cup Host Committee, Inc. &amp; FIFA World Cup
+							<p>&copy;2026 Worldcup 2026 &amp; Capella Travel &amp; FIFA World Cup
 								26™</p>
-						</div>
-						<div class="bottombar-author">
-							<span>Built with</span>
-							<span class="dd-icon">
-								<span class="icon">
-									<svg viewBox="0 0 24 18" width="100%" height="100%" fill="currentColor"
-										xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M6.10385 11.5977L11.6709 17.1648L23.2686 5.56709L17.7016 4.20428e-05L6.10385 11.5977Z">
-										</path>
-										<path
-											d="M5.56705 0.0750395L0 5.64209L11.5977 17.2398L17.1648 11.6727L5.56705 0.0750395Z">
-										</path>
-									</svg>
-								</span>
-							</span>
-							<span>by <a
-									href="https://dd.nyc/?utm_source=fifa&utm_medium=referral&utm_campaign=fifa-footer-link"
-									target="_blank">DD.NYC<sup>&reg;</sup></a></span>
 						</div>
 					</div>
 
@@ -2602,96 +2254,34 @@ M23.175 192.514L22.295 192.866L20.039 189.618H18.551V199.474L20.343 199.938L19.8
 
 			<div class="popup-nav altfont">
 				<ul>
-					<li class="js-expand">
-						<a href="/about/" class="js-expand-button" target="">About</a>
-
-						<ul>
-							<li>
-								<a href="/about/" target="">Who We Are</a>
-							</li>
-							<li>
-								<a href="/about/#our-mission" target="">Our Mission</a>
-							</li>
-							<li>
-								<a href="/about/#our-team" target="">Our Team</a>
-							</li>
-							<li>
-								<a href="/about/#welcome-world-foundation" target="">Welcome World Foundation</a>
-							</li>
-							<li>
-								<a href="/about/#nynj-poster" target="">NYNJ Poster</a>
-							</li>
-							<li>
-								<a href="/about/#nynj-sonic-id" target="">NYNJ Sonic ID</a>
-							</li>
-							<li>
-								<a href="/vendor-opportunities/" target="">Vendor Interest Form</a>
-							</li>
-						</ul>
+					<li>
+						<a href="https://capellatravel.com" target="_blank" rel="noopener">About</a>
 					</li>
-
-					<li class="js-expand">
-						<a href="/schedule/" class="" target="">Schedule</a>
-
+					<li>
+						<a href="#section-about" class="js-popup-link">Worldcup 2026</a>
 					</li>
-
-					<li class="js-expand">
-						<a href="/venues/" class="js-expand-button" target="">Venues</a>
-
-						<ul>
-							<li><a href="/venues/">All Venues</a></li>
-							<li><a href="/venues/#nynj-stadium" data-target="#nynj-stadium">Worldcup 2026
-									Stadium</a>
-							</li>
-							<li><a href="/venues/#team-base-camps" data-target="#team-base-camps">Team Base Camps</a>
-							</li>
-						</ul>
+					<li>
+						<a href="#section-schedule" class="js-popup-link">Lịch Thi Đấu</a>
 					</li>
-
-					<li class="js-expand">
-						<a href="/destination/" class="js-expand-button" target="">DESTINATION NYNJ</a>
-
-						<ul>
-							<li><a href="/destination/">Explore NYNJ</a></li>
-							<li><a href="/destination/#plan-your-trip" data-target="#plan-your-trip">Plan Your Trip</a>
-							</li>
-							<li><a href="/destination/#accommodations" data-target="#accommodations">Accommodations</a>
-							</li>
-							<li><a href="/destination/#local-transit-agencies"
-									data-target="#local-transit-agencies">Local Transit Agencies</a></li>
-							<li><a href="/destination/#events-and-toolkit" data-target="#events-and-toolkit">Community
-									Events and Toolkit</a></li>
-						</ul>
+					<li>
+						<a href="#section-news" class="js-popup-link">Tour</a>
 					</li>
-
-					<li class="js-expand">
-						<a href="/fan-festival/" class="js-expand-button" target="">Fan Festival</a>
-
-						<ul>
-							<li><a href="/fan-festival/">FIFA Fan Festival™ NYNJ</a></li>
-							<li><a href="/fan-festival/#fan-village" data-target="#fan-village">NYNJ World Cup Fan
-									Village</a></li>
-							<li><a href="/fan-festival/#fan-zones" data-target="#fan-zones">Official Fan Zones</a></li>
-							<li><a href="/fan-festival/#road-tour" data-target="#road-tour">Skyline to Shoreline Road
-									Tour™</a></li>
-						</ul>
+					<li>
+						<a href="#section-form" class="js-popup-link">Đăng Ký</a>
 					</li>
-
-					<li class="js-expand">
-						<a href="/transportation/" class="js-expand-button" target="">Transportation</a>
-
-						<ul>
-							<li><a href="/getting-to-nynj-stadium/">Getting to NYNJ Stadium</a></li>
-							<li><a href="/getting-to-fifa-fan-festival-nynj">Getting to FIFA Fan Festival™ NYNJ</a></li>
-						</ul>
+					<li>
+						<a href="tel:+84123456789" class="js-popup-link"
+							style="display: inline-flex; align-items: center; gap: 8px; color: var(--c1);">
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+								fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round">
+								<path
+									d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+								</path>
+							</svg>
+							<span>Liên Hệ</span>
+						</a>
 					</li>
-
-					<li><a href="/partners/" target="">Partners</a></li>
-					<li><a href="/news/" target="">News</a></li>
-					<li><a href="/faq/" target="">FAQ</a></li>
-					<li><a href="https://store.fifa.com/content/new-york-new-jersey-2026-host-city" target="_blank"
-							rel="noopener">Shop</a></li>
-					<li><a href="https://www.fifa.com/" target="_blank" rel="noopener">FIFA</a></li>
 				</ul>
 			</div>
 
@@ -2864,6 +2454,42 @@ M23.175 192.514L22.295 192.866L20.039 189.618H18.551V199.474L20.343 199.938L19.8
 	<script type="text/javascript" src="/wp-content/plugins/instagram-feed/js/sbi-scripts.min.js?ver=6.10.0"
 		id="sbi_scripts-js"></script>
 	<script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'9aa3ae51ca620703',t:'MTc2NTEwNjkyMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+	<script>
+		// Smooth scroll functionality for section links and mobile menu handling
+		document.addEventListener('DOMContentLoaded', function () {
+			const sectionLinks = document.querySelectorAll('a[href^="#section-"]');
+			const popup = document.querySelector('#popup-nav');
+			const closeBtn = document.querySelector('.js-popup-close');
+
+			sectionLinks.forEach(link => {
+				link.addEventListener('click', function (e) {
+					e.preventDefault();
+					const targetId = this.getAttribute('href');
+					const targetSection = document.querySelector(targetId);
+
+					if (targetSection) {
+						targetSection.scrollIntoView({
+							behavior: 'smooth',
+							block: 'start'
+						});
+
+						// Close mobile popup if active
+						if (popup && popup.classList.contains('active')) {
+							// Trigger closing logic
+							if (closeBtn) {
+								closeBtn.click();
+							} else {
+								// Fallback direct manipulation
+								popup.classList.remove('active');
+								document.body.classList.remove('overflow-hidden');
+								document.documentElement.classList.remove('overflow-hidden');
+							}
+						}
+					}
+				});
+			});
+		});
+	</script>
 </body>
 
 </html>

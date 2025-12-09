@@ -2362,11 +2362,16 @@
         min-height: var(--app-height);
     }
 
+    .s7 .wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     .s7-1 {
         position: relative;
         z-index: 1;
         max-width: 800rem;
-        width: 50%;
+        width: 100%;
     }
 
     .s7-2 {
@@ -2379,6 +2384,7 @@
 
     .s7-4 {
         margin-top: 35rem;
+        padding: 0;
     }
 
     .s7-5 {
@@ -4256,8 +4262,14 @@
         width: 100%;
     }
 
+    .s7 .wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     .s7-4 {
         margin-top: 20rem;
+        padding: 0;
     }
 
     .s8 {
