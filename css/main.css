@@ -2035,7 +2035,9 @@
         padding-left: 0em;
     }
 
-    .s3-2 .countdown-timer {}
+    .s3-2 .countdown-timer {
+        font-size: var(--f-xl1);
+    }
 
     .s3-3 {
         text-transform: uppercase;
@@ -3591,7 +3593,7 @@
         --f-b3: 18rem;
         --f-l: 40rem;
         --f-xl: 36rem;
-        --f-xl1: 50rem;
+        --f-xl1: 40rem;
         --f-xxl: 56rem;
 
         --mw: 680px;
@@ -5232,6 +5234,9 @@
 }
 
 @media screen and (min-width: 1024px) {
+    :root {
+        --f-xl: max(14px, 120rem);
+    }
 
     .mobile {
         display: none !important;
