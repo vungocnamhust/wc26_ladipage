@@ -4260,6 +4260,17 @@
         grid-column: 1/2;
     }
 
+    /* Mobile font size for tour cards */
+    .s6-3 h1 {
+        font-size: 14rem !important;
+        margin-bottom: 5rem;
+    }
+
+    .s6-3 p {
+        font-size: 12rem !important;
+        line-height: 1.4;
+    }
+
     .s7-1 {
         width: 100%;
     }
