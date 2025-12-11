@@ -53,8 +53,6 @@
 		!function (s, n) { var o, i, e; function c(e) { try { var t = { supportTests: e, timestamp: (new Date).valueOf() }; sessionStorage.setItem(o, JSON.stringify(t)) } catch (e) { } } function p(e, t, n) { e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0); var t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data), a = (e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0), new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data)); return t.every(function (e, t) { return e === a[t] }) } function u(e, t) { e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0); for (var n = e.getImageData(16, 16, 1, 1), a = 0; a < n.data.length; a++)if (0 !== n.data[a]) return !1; return !0 } function f(e, t, n, a) { switch (t) { case "flag": return n(e, "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f", "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f") ? !1 : !n(e, "\ud83c\udde8\ud83c\uddf6", "\ud83c\udde8\u200b\ud83c\uddf6") && !n(e, "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f", "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f"); case "emoji": return !a(e, "\ud83e\udedf") }return !1 } function g(e, t, n, a) { var r = "undefined" != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope ? new OffscreenCanvas(300, 150) : s.createElement("canvas"), o = r.getContext("2d", { willReadFrequently: !0 }), i = (o.textBaseline = "top", o.font = "600 32px Arial", {}); return e.forEach(function (e) { i[e] = t(o, e, n, a) }), i } function t(e) { var t = s.createElement("script"); t.src = e, t.defer = !0, s.head.appendChild(t) } "undefined" != typeof Promise && (o = "wpEmojiSettingsSupports", i = ["flag", "emoji"], n.supports = { everything: !0, everythingExceptFlag: !0 }, e = new Promise(function (e) { s.addEventListener("DOMContentLoaded", e, { once: !0 }) }), new Promise(function (t) { var n = function () { try { var e = JSON.parse(sessionStorage.getItem(o)); if ("object" == typeof e && "number" == typeof e.timestamp && (new Date).valueOf() < e.timestamp + 604800 && "object" == typeof e.supportTests) return e.supportTests } catch (e) { } return null }(); if (!n) { if ("undefined" != typeof Worker && "undefined" != typeof OffscreenCanvas && "undefined" != typeof URL && URL.createObjectURL && "undefined" != typeof Blob) try { var e = "postMessage(" + g.toString() + "(" + [JSON.stringify(i), f.toString(), p.toString(), u.toString()].join(",") + "));", a = new Blob([e], { type: "text/javascript" }), r = new Worker(URL.createObjectURL(a), { name: "wpTestEmojiSupports" }); return void (r.onmessage = function (e) { c(n = e.data), r.terminate(), t(n) }) } catch (e) { } c(n = g(i, f, p, u)) } t(n) }).then(function (e) { for (var t in e) n.supports[t] = e[t], n.supports.everything = n.supports.everything && n.supports[t], "flag" !== t && (n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && n.supports[t]); n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && !n.supports.flag, n.DOMReady = !1, n.readyCallback = function () { n.DOMReady = !0 } }).then(function () { return e }).then(function () { var e; n.supports.everything || (n.readyCallback(), (e = n.source || {}).concatemoji ? t(e.concatemoji) : e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji))) })) }((window, document), window._wpemojiSettings);
 		/* ]]> */
 	</script>
-	<link rel='stylesheet' id='sbi_styles-css'
-		href='/wp-content/plugins/instagram-feed/css/sbi-styles.min.css?ver=6.10.0' type='text/css' media='all' />
 	<style id='wp-emoji-styles-inline-css' type='text/css'>
 		img.wp-smiley,
 		img.emoji {
@@ -412,8 +410,6 @@
 			line-height: 1.6;
 		}
 	</style>
-	<link rel='stylesheet' id='contact-form-7-css'
-		href='/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=6.1.4' type='text/css' media='all' />
 	<link rel="https://api.w.org/" href="/wp-json/" />
 	<link rel="alternate" title="JSON" type="application/json" href="/wp-json/wp/v2/pages/2" />
 	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
@@ -510,7 +506,7 @@
 	<link href="css/theme-style.css?v=20251010-2040" rel="stylesheet" type="text/css">
 	<link href="css/form-custom.css" rel="stylesheet" type="text/css">
 
-	<script> (function () { var s = document.createElement('script'); var h = document.querySelector('head') || document.body; s.src = 'https://acsbapp.com/apps/app/dist/js/app.js'; s.async = true; s.onload = function () { acsbJS.init({ statementLink: '', footerHtml: 'Web Accessibility by DD.NYC®', hideMobile: false, hideTrigger: false, disableBgProcess: false, language: 'en', position: 'left', leadColor: '#000000', triggerColor: '#000000', triggerRadius: '50%', triggerPositionX: 'right', triggerPositionY: 'bottom', triggerIcon: 'people', triggerSize: 'medium', triggerOffsetX: 40, triggerOffsetY: 40, mobile: { triggerSize: 'small', triggerPositionX: 'right', triggerPositionY: 'center', triggerOffsetX: 10, triggerOffsetY: 0, triggerRadius: '50%' } }); }; h.appendChild(s); })(); </script>
+	<!-- <script> (function () { var s = document.createElement('script'); var h = document.querySelector('head') || document.body; s.src = 'https://acsbapp.com/apps/app/dist/js/app.js'; s.async = true; s.onload = function () { acsbJS.init({ statementLink: '', footerHtml: 'Web Accessibility by DD.NYC®', hideMobile: false, hideTrigger: false, disableBgProcess: false, language: 'en', position: 'left', leadColor: '#000000', triggerColor: '#000000', triggerRadius: '50%', triggerPositionX: 'right', triggerPositionY: 'bottom', triggerIcon: 'people', triggerSize: 'medium', triggerOffsetX: 40, triggerOffsetY: 40, mobile: { triggerSize: 'small', triggerPositionX: 'right', triggerPositionY: 'center', triggerOffsetX: 10, triggerOffsetY: 0, triggerRadius: '50%' } }); }; h.appendChild(s); })(); </script> -->
 
 	<!-- SweetAlert2 for beautiful alerts -->
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
@@ -1262,68 +1258,74 @@ M10.0035 214.783C10.7575 214.783 11.635 214.88 12.636 215.075C13.65 215.27 14.39
 				</div>
 			</div>
 
-			
-			<div class="section s7 feedback-container" id="section-form"
-				style="background-image: url('images/tapthecapellatravel.JPG'); background-size: cover; background-position: center; position: relative;">
-				<div
-					style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); z-index: 0;">
-				</div>
-				<div class="wrapper" style="position: relative; z-index: 1;">
+
+			<div class="section s7 feedback-container" id="section-form">
+				<div class="wrapper">
 					<div class="s7-1">
 						<div class="s7-3">
 							<div class="title title__default">
-								<h2>TƯ VẤN<br />TOUR</h2>
+								<h2>TƯ VẤN <br>TOUR</h2>
 							</div>
 						</div>
 						<div class="s7-4">
-							<form id="tour-consultation-form" class="wpcf7-form init"
-								aria-label="Tour Consultation Form">
-								<div class="formbox">
-									<div class="formbox-row">
-										<div class="formbox-cell">
-											<div class="textfield">
-												<input type="text" name="fullname" class="textfield-input"
-													placeholder="Họ và tên *" required />
+							<div class="wpcf7 js" id="tour-form-wrapper">
+								<form id="tour-consultation-form" class="wpcf7-form init"
+									aria-label="Tour Consultation Form">
+									<div class="formbox">
+										<div class="formbox-row">
+											<div class="formbox-cell">
+												<div class="textfield">
+													<input type="text" name="fullname"
+														class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield-input"
+														autocomplete="name" aria-required="true" aria-invalid="false"
+														placeholder="Họ và tên *" required />
+												</div>
 											</div>
 										</div>
-									</div>
-									<div class="formbox-row">
-										<div class="formbox-cell">
-											<div class="textfield">
-												<input type="tel" name="phone" class="textfield-input"
-													placeholder="Số điện thoại *" required />
+										<div class="formbox-row">
+											<div class="formbox-cell">
+												<div class="textfield">
+													<input type="tel" name="phone"
+														class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel textfield-input"
+														aria-required="true" aria-invalid="false"
+														placeholder="Số điện thoại *" required />
+												</div>
 											</div>
 										</div>
-									</div>
-									<div class="formbox-row">
-										<div class="formbox-cell">
-											<div class="textfield">
-												<input type="email" name="email" class="textfield-input"
-													placeholder="Email *" required />
+										<div class="formbox-row">
+											<div class="formbox-cell">
+												<div class="textfield">
+													<input type="email" name="email"
+														class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email textfield-input"
+														autocomplete="email" aria-required="true" aria-invalid="false"
+														placeholder="Email *" required />
+												</div>
 											</div>
 										</div>
-									</div>
-									<div class="formbox-row">
-										<div class="formbox-cell">
-											<div class="textfield">
-												<input type="number" name="participants" class="textfield-input"
-													placeholder="Số người tham gia *" min="1" required />
+										<div class="formbox-row">
+											<div class="formbox-cell">
+												<div class="textfield">
+													<input type="number" name="participants"
+														class="wpcf7-form-control wpcf7-number wpcf7-text textfield-input"
+														aria-invalid="false" placeholder="Số người tham gia *" min="1"
+														required />
+												</div>
 											</div>
 										</div>
-									</div>
-									<div class="formbox-row">
-										<div class="formbox-cell">
-											<div class="selector js-selector">
-												<div class="selector-holder">
-													<input type="text" name="tour_package"
-														class="selector-holder-input js-selector-value" value=""
-														readonly placeholder="Gói tour quan tâm *"
-														title="Gói tour quan tâm" required />
-													<span class="selector-holder-icon">
-														<svg class="icon">
-															<use xlink:href="#i-chevron"></use>
-														</svg>
-													</span>
+										<div class="formbox-row">
+											<div class="formbox-cell">
+												<div class="selector js-selector">
+													<div class="selector-holder">
+														<input type="text" name="tour_package"
+															class="selector-holder-input js-selector-value" value=""
+															readonly placeholder="Gói tour quan tâm *"
+															title="Gói tour quan tâm" required />
+														<span class="selector-holder-icon">
+															<svg class="icon">
+																<use xlink:href="#i-chevron"></use>
+															</svg>
+														</span>
+													</div>
 													<div class="selector-list js-selector-list">
 														<div class="selector-option">
 															<div class="selector-option-inner js-selector-option fill"
@@ -1365,37 +1367,39 @@ M10.0035 214.783C10.7575 214.783 11.635 214.88 12.636 215.075C13.65 215.27 14.39
 												</div>
 											</div>
 										</div>
-									</div>
-									<div class="formbox-row">
-										<div class="formbox-cell">
-											<div class="textfield">
-												<input type="date" name="departure_date" class="textfield-input"
-													placeholder="Ngày khởi hành mong muốn" />
+										<div class="formbox-row">
+											<div class="formbox-cell">
+												<div class="textfield">
+													<input type="date" name="departure_date"
+														class="wpcf7-form-control wpcf7-text textfield-input"
+														aria-invalid="false" placeholder="Ngày khởi hành mong muốn" />
+												</div>
+											</div>
+										</div>
+										<div class="formbox-row">
+											<div class="formbox-cell">
+												<div class="textfield">
+													<textarea name="notes" rows="3"
+														class="wpcf7-form-control wpcf7-textarea textfield-input"
+														aria-invalid="false"
+														placeholder="Ghi chú / Yêu cầu đặc biệt"></textarea>
+												</div>
 											</div>
 										</div>
 									</div>
-									<div class="formbox-row">
-										<div class="formbox-cell">
-											<div class="textfield">
-												<textarea name="notes" class="textfield-input" rows="3"
-													placeholder="Ghi chú / Yêu cầu đặc biệt"></textarea>
-											</div>
-										</div>
+									<div class="formbox-footer">
+										<button class="button button__main button__wide wpcf7-submit" type="submit">
+											<span class="button-text altfont">GỬI THÔNG TIN</span>
+										</button>
 									</div>
-								</div>
-								<div class="formbox-footer">
-									<button class="button button__main button__wide" type="submit">
-										<span class="button-text altfont">GỬI THÔNG TIN</span>
-									</button>
-								</div>
-								<div class="form-response"
-									style="margin-top: 20px; padding: 15px; border-radius: 8px; display: none;"></div>
-							</form>
+									<div class="wpcf7-response-output" aria-hidden="true"></div>
+								</form>
+							</div>
 						</div>
 					</div>
-					<div class="s7-2" style="display: none;">
-						<img src="images/2025/10/imgonline-com-ua-resize-scZIVoW1WQTB-1-1.webp"
-							alt="FIFA World Cup 2026™ NYNJ" class="cover">
+					<div class="s7-2">
+						<img src="images/tapthecapellatravel.JPG" alt="Capella Travel - FIFA World Cup 2026 Tour"
+							class="cover">
 					</div>
 					<div class="s7-5">
 						<div class="s7-3">
@@ -1405,8 +1409,8 @@ M10.0035 214.783C10.7575 214.783 11.635 214.88 12.636 215.075C13.65 215.27 14.39
 								</div>
 							</div>
 							<div class="s7-3-2">
-								<p>Thông tin của bạn đã được gửi thành công.<br>
-									Chúng tôi sẽ liên hệ tư vấn trong thời gian sớm nhất.</p>
+								<p>Thông tin của bạn đã được gửi thành công.<br>Chúng tôi sẽ liên hệ tư vấn trong thời
+									gian sớm nhất.</p>
 							</div>
 						</div>
 					</div>
@@ -1421,33 +1425,33 @@ M10.0035 214.783C10.7575 214.783 11.635 214.88 12.636 215.075C13.65 215.27 14.39
 				const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwhKMEq5wiKWxINLiY9E8TlG_8pPTdUKUNlg9aRUflispSvNv95Bg6pIRB2SPhO5Upn4w/exec';
 
 				// Debug flag - set to false để tắt logging trong production
-				const DEBUG_MODE = true;
+				const DEBUG_MODE = false;
 
 				const form = document.getElementById('tour-consultation-form');
 				const debugArea = document.getElementById('debug-output');
 				const curlContent = document.getElementById('curl-content');
 
-				// function debugLog(message, data = null) {
-				// 	if (!DEBUG_MODE) return;
+				function debugLog(message, data = null) {
+					if (!DEBUG_MODE) return;
 
-				// 	const timestamp = new Date().toLocaleTimeString('vi-VN');
-				// 	console.log(`[${timestamp}] 🔍 FORM DEBUG:`, message);
+					const timestamp = new Date().toLocaleTimeString('vi-VN');
+					console.log(`[${timestamp}] 🔍 FORM DEBUG:`, message);
 
-				// 	if (data !== null) {
-				// 		console.log('📦 Data:', data);
-				// 	}
-				// }
+					if (data !== null) {
+						console.log('📦 Data:', data);
+					}
+				}
 
 				form.addEventListener('submit', async function (e) {
 					e.preventDefault();
-					// debugLog('Form submit triggered');
+					debugLog('Form submit triggered');
 
-					// // 1. Thu thập dữ liệu từ form
-					// debugLog('Step 1: Collecting form data...');
-					// const formData = new FormData(this);
+					// 1. Thu thập dữ liệu từ form
+					debugLog('Step 1: Collecting form data...');
+					const formData = new FormData(this);
 
-					// // 1.5. Format timestamp và departure_date
-					// debugLog('Step 1.5: Formatting dates...');
+					// 1.5. Format timestamp và departure_date
+					debugLog('Step 1.5: Formatting dates...');
 
 					// Function để format ngày theo định dạng DD/MM/YYYY HH:mm:ss
 					function formatDateTime(date) {
@@ -1471,7 +1475,6 @@ M10.0035 214.783C10.7575 214.783 11.635 214.88 12.636 215.075C13.65 215.27 14.39
 					}
 
 					// Thêm timestamp với định dạng DD/MM/YYYY HH:mm:ss
-					const formData = new FormData(this);
 					const timestamp = formatDateTime(new Date());
 					formData.set('timestamp', timestamp);
 
@@ -1482,8 +1485,8 @@ M10.0035 214.783C10.7575 214.783 11.635 214.88 12.636 215.075C13.65 215.27 14.39
 						formData.set('departure_date', departureDateFormatted);
 					}
 
-					// debugLog('Formatted timestamp:', timestamp);
-					// debugLog('Formatted departure_date:', formData.get('departure_date'));
+					debugLog('Formatted timestamp:', timestamp);
+					debugLog('Formatted departure_date:', formData.get('departure_date'));
 
 					// ---------------------------------------------------------
 					// LOGGING & DEBUGGING - Generate CURL Command
@@ -1502,11 +1505,6 @@ M10.0035 214.783C10.7575 214.783 11.635 214.88 12.636 215.075C13.65 215.27 14.39
 
 					console.log('💻 Generated CURL Command:');
 					console.log(curlCommand);
-
-					// Hiển thị CURL ra màn hình HTML
-					debugArea.style.display = 'block';
-					curlContent.innerText = curlCommand;
-
 					console.groupEnd();
 					// ---------------------------------------------------------
 
@@ -1520,7 +1518,7 @@ M10.0035 214.783C10.7575 214.783 11.635 214.88 12.636 215.075C13.65 215.27 14.39
 						});
 
 						console.log('✅ Response Status:', response.status);
-						// debugLog('Step 2 ✅: Request completed successfully');
+						debugLog('Step 2 ✅: Request completed successfully');
 
 						// 3. Hiển thị thông báo thành công với SweetAlert2
 						swal('Thành công', 'Chúng tôi đã nhận được thông tin của bạn!', 'success');
@@ -1531,12 +1529,12 @@ M10.0035 214.783C10.7575 214.783 11.635 214.88 12.636 215.075C13.65 215.27 14.39
 							debugArea.style.display = 'none';
 						}, 5000);
 
-						// debugLog('🎉 FORM SUBMISSION SUCCESSFUL!');
+						debugLog('🎉 FORM SUBMISSION SUCCESSFUL!');
 						console.log('═══════════════════════════════════════════');
 
 					} catch (error) {
 						// Error handling
-						// debugLog('❌ ERROR: Form submission failed');
+						debugLog('❌ ERROR: Form submission failed');
 						console.error('Error type:', error.name);
 						console.error('Error message:', error.message);
 						console.error('Error stack:', error.stack);
@@ -1544,14 +1542,14 @@ M10.0035 214.783C10.7575 214.783 11.635 214.88 12.636 215.075C13.65 215.27 14.39
 						// Hiển thị error với SweetAlert2
 						swal('Lỗi', 'Không thể gửi dữ liệu, vui lòng thử lại.', 'error');
 
-						console.log('═══════════════════════════════════════════');
+						// console.log('═══════════════════════════════════════════');
 					}
 				});
 
 				// Log khi script được load
-				// debugLog('✅ Form script initialized successfully');
+				debugLog('✅ Form script initialized successfully');
 				// debugLog('Google Script URL configured:', GOOGLE_SCRIPT_URL);
-				console.log('═══════════════════════════════════════════');
+				// console.log('═══════════════════════════════════════════');
 			</script>
 
 			<script>
@@ -1973,7 +1971,7 @@ M10.0035 214.783C10.7575 214.783 11.635 214.88 12.636 215.075C13.65 215.27 14.39
 		<script>
 			document.addEventListener("DOMContentLoaded", function () {
 				const cookieBanner = document.getElementById("cookie-banner");
-				const acceptButton = document.getElementById("cookies-accept");
+				// const acceptButton = document.getElementById("cookies-accept");
 
 				if (!localStorage.getItem("cookiesAccepted")) {
 					setTimeout(() => {
@@ -1981,11 +1979,11 @@ M10.0035 214.783C10.7575 214.783 11.635 214.88 12.636 215.075C13.65 215.27 14.39
 					}, 1000);
 				}
 
-				acceptButton.addEventListener("click", function (e) {
-					e.preventDefault();
-					localStorage.setItem("cookiesAccepted", "true");
-					cookieBanner.classList.remove("cookie--visible");
-				});
+				// acceptButton.addEventListener("click", function (e) {
+				// 	e.preventDefault();
+				// 	localStorage.setItem("cookiesAccepted", "true");
+				// 	cookieBanner.classList.remove("cookie--visible");
+				// });
 			});
 		</script>
 
@@ -2048,16 +2046,16 @@ M10.0035 214.783C10.7575 214.783 11.635 214.88 12.636 215.075C13.65 215.27 14.39
 					linkContactField.setAttribute('value', referrer);
 				}
 
-				fetch("https://ipinfo.io/json?token=e331fc3befc868")
-					.then(response => response.json())
-					.then(data => {
-						const ipField = formContainer.querySelector('#ipdetails');
-						if (ipField) {
-							const ipString = `IP: ${data.ip}, City: ${data.city}, Region: ${data.region}, Country: ${data.country}`;
-							ipField.value = ipString;
-							ipField.setAttribute('value', ipString);
-						}
-					});
+				// fetch("https://ipinfo.io/json?token=e331fc3befc868")
+				// 	.then(response => response.json())
+				// 	.then(data => {
+				// 		const ipField = formContainer.querySelector('#ipdetails');
+				// 		if (ipField) {
+				// 			const ipString = `IP: ${data.ip}, City: ${data.city}, Region: ${data.region}, Country: ${data.country}`;
+				// 			ipField.value = ipString;
+				// 			ipField.setAttribute('value', ipString);
+				// 		}
+				// 	});
 			});
 		</script>
 
@@ -2355,35 +2353,9 @@ M10.0035 214.783C10.7575 214.783 11.635 214.88 12.636 215.075C13.65 215.27 14.39
 	<script type="text/javascript">
 		var sbiajaxurl = "/wp-admin/admin-ajax.php";
 	</script>
-	<script type="text/javascript" src="/wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6"
-		id="wp-hooks-js"></script>
-	<script type="text/javascript" src="/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6"
-		id="wp-i18n-js"></script>
-	<script type="text/javascript" id="wp-i18n-js-after">
-		/* <![CDATA[ */
-		wp.i18n.setLocaleData({ 'text direction\u0004ltr': ['ltr'] });
-		/* ]]> */
-	</script>
-	<script type="text/javascript" src="/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=6.1.4"
-		id="swv-js"></script>
-	<script type="text/javascript" id="contact-form-7-js-before">
-		/* <![CDATA[ */
-		var wpcf7 = {
-			"api": {
-				"root": "https:\/\/nynjfwc26.com\/wp-json\/",
-				"namespace": "contact-form-7\/v1"
-			},
-			"cached": 1
-		};
-		/* ]]> */
-	</script>
-	<script type="text/javascript" src="/wp-content/plugins/contact-form-7/includes/js/index.js?ver=6.1.4"
-		id="contact-form-7-js"></script>
 	<script type="text/javascript"
 		src="https://www.google.com/recaptcha/api.js?render=6LdHVXQrAAAAAPxwpyvmKP9t6zl7OS6vD-TdU4cs&amp;ver=3.0"
 		id="google-recaptcha-js"></script>
-	<script type="text/javascript" src="/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0"
-		id="wp-polyfill-js"></script>
 	<script type="text/javascript" id="wpcf7-recaptcha-js-before">
 		/* <![CDATA[ */
 		var wpcf7_recaptcha = {
@@ -2395,19 +2367,6 @@ M10.0035 214.783C10.7575 214.783 11.635 214.88 12.636 215.075C13.65 215.27 14.39
 		};
 		/* ]]> */
 	</script>
-	<script type="text/javascript" src="/wp-content/plugins/contact-form-7/modules/recaptcha/index.js?ver=6.1.4"
-		id="wpcf7-recaptcha-js"></script>
-	<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
-	<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"
-		id="jquery-migrate-js"></script>
-	<script type="text/javascript" id="sbi_scripts-js-extra">
-		/* <![CDATA[ */
-		var sb_instagram_js_options = { "font_method": "svg", "resized_url": "https:\/\/nynjfwc26.com\/wp-content\/uploads\/sb-instagram-feed-images\/", "placeholder": "https:\/\/nynjfwc26.com\/wp-content\/plugins\/instagram-feed\/img\/placeholder.png", "ajax_url": "https:\/\/nynjfwc26.com\/wp-admin\/admin-ajax.php" };
-		/* ]]> */
-	</script>
-	<script type="text/javascript" src="/wp-content/plugins/instagram-feed/js/sbi-scripts.min.js?ver=6.10.0"
-		id="sbi_scripts-js"></script>
-	<script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'9aa3ae51ca620703',t:'MTc2NTEwNjkyMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
 	<script>
 		// Smooth scroll functionality for section links and mobile menu handling
 		document.addEventListener('DOMContentLoaded', function () {

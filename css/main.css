@@ -621,6 +621,7 @@
         cursor: pointer;
         padding: 0 20rem;
         color: var(--c0);
+        background-color: var(--c0);
     }
 
     .selector-holder-input {
@@ -640,6 +641,8 @@
         height: max(10px, 14rem);
         align-items: center;
         justify-content: center;
+        color: var(--c1);
+        transform: scaleY(-1);
     }
 
     .selector.active .selector-holder {
@@ -2374,6 +2377,7 @@
         z-index: 1;
         max-width: 800rem;
         width: 100%;
+        padding: 0 var(--wr);
     }
 
     .s7-2 {
