@@ -569,6 +569,55 @@
 
     .formbox-footer {
         margin-top: 60rem;
+        position: relative;
+    }
+
+    /* Form Loading Styles */
+    .form-loading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15rem;
+        height: max(50px, 75rem);
+        background-color: var(--c2);
+        border-radius: var(--br4);
+        color: var(--c0);
+        width: 100%;
+    }
+
+    .loading-spinner {
+        width: 24px;
+        height: 24px;
+        border: 3px solid rgba(255, 255, 255, 0.3);
+        border-top-color: var(--c0);
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .loading-text {
+        font-size: var(--f-m);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: -.02em;
+        animation: pulse 1.5s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+
+        0%,
+        100% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0.6;
+        }
     }
 
     .textfield {

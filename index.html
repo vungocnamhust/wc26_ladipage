@@ -770,11 +770,11 @@ M10.0035 214.783C10.7575 214.783 11.635 214.88 12.636 215.075C13.65 215.27 14.39
 						<div class="s1-1">
 							<div class="s1-2">
 								<picture>
-									<source type="image/jpeg" srcset="images/2025/06/sample-01.webp"
+									<source type="image/jpeg" srcset="images/2025/06/background1-horizontal.jpg"
 										media="(min-width: 1024px)">
-									<source type="image/jpeg" srcset="images/2025/06/image-1.webp"
+									<source type="image/jpeg" srcset="images/2025/06/background1-vertical.jpg"
 										media="(max-width: 1024px)">
-									<img src="images/2025/06/sample-01.webp" alt="FIFA World Cup 2026™ NYNJ"
+									<img src="images/2025/06/background1-horizontal.jpg" alt="FIFA World Cup 2026™ NYNJ"
 										class="cover">
 								</picture>
 							</div>
@@ -1261,7 +1261,7 @@ M10.0035 214.783C10.7575 214.783 11.635 214.88 12.636 215.075C13.65 215.27 14.39
 					<div class="s7-1">
 						<div class="s7-3">
 							<div class="title title__default">
-								<h2>TƯ VẤN <br>TOUR</h2>
+								<h2>LIÊN HỆ <br>TƯ VẤN</h2>
 							</div>
 						</div>
 						<div class="s7-4">
@@ -1344,9 +1344,14 @@ M10.0035 214.783C10.7575 214.783 11.635 214.88 12.636 215.075C13.65 215.27 14.39
 										</div>
 									</div>
 									<div class="formbox-footer">
-										<button class="button button__main button__wide wpcf7-submit" type="submit">
+										<button class="button button__main button__wide wpcf7-submit" type="submit"
+											id="submit-btn">
 											<span class="button-text altfont">GỬI THÔNG TIN</span>
 										</button>
+										<div class="form-loading" id="form-loading" style="display: none;">
+											<div class="loading-spinner"></div>
+											<span class="loading-text altfont">Đang gửi...</span>
+										</div>
 									</div>
 									<div class="wpcf7-response-output" aria-hidden="true"></div>
 								</form>
@@ -1398,9 +1403,25 @@ M10.0035 214.783C10.7575 214.783 11.635 214.88 12.636 215.075C13.65 215.27 14.39
 					}
 				}
 
+				const submitBtn = document.getElementById('submit-btn');
+				const formLoading = document.getElementById('form-loading');
+
+				function showLoading() {
+					submitBtn.style.display = 'none';
+					formLoading.style.display = 'flex';
+				}
+
+				function hideLoading() {
+					submitBtn.style.display = '';
+					formLoading.style.display = 'none';
+				}
+
 				form.addEventListener('submit', async function (e) {
 					e.preventDefault();
 					debugLog('Form submit triggered');
+
+					// Ẩn button submit và hiện loading
+					showLoading();
 
 					// 1. Thu thập dữ liệu từ form
 					debugLog('Step 1: Collecting form data...');
@@ -1476,10 +1497,13 @@ M10.0035 214.783C10.7575 214.783 11.635 214.88 12.636 215.075C13.65 215.27 14.39
 						console.log('✅ Response Status:', response.status);
 						debugLog('Step 2 ✅: Request completed successfully');
 
-						// 3. Hiển thị thông báo thành công với SweetAlert2
+						// 3. Ẩn loading và hiện lại button
+						hideLoading();
+
+						// 4. Hiển thị thông báo thành công với SweetAlert2
 						swal('Thành công', 'Chúng tôi đã nhận được thông tin của bạn!', 'success');
 
-						// 4. Reset form và ẩn debug area sau 5 giây
+						// 5. Reset form và ẩn debug area sau 5 giây
 						form.reset();
 						setTimeout(() => {
 							debugArea.style.display = 'none';
@@ -1494,6 +1518,9 @@ M10.0035 214.783C10.7575 214.783 11.635 214.88 12.636 215.075C13.65 215.27 14.39
 						console.error('Error type:', error.name);
 						console.error('Error message:', error.message);
 						console.error('Error stack:', error.stack);
+
+						// Ẩn loading và hiện lại button khi có lỗi
+						hideLoading();
 
 						// Hiển thị error với SweetAlert2
 						swal('Lỗi', 'Không thể gửi dữ liệu, vui lòng thử lại.', 'error');
