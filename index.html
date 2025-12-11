@@ -1359,7 +1359,7 @@ M10.0035 214.783C10.7575 214.783 11.635 214.88 12.636 215.075C13.65 215.27 14.39
 						</div>
 					</div>
 					<div class="s7-2">
-						<img src="images/worldcupteam.jpg" alt="Capella Travel - FIFA World Cup 2026 Tour"
+						<img src="images/worldcupteam.png" alt="Capella Travel - FIFA World Cup 2026 Tour"
 							class="cover">
 					</div>
 					<div class="s7-5">
@@ -1370,8 +1370,10 @@ M10.0035 214.783C10.7575 214.783 11.635 214.88 12.636 215.075C13.65 215.27 14.39
 								</div>
 							</div>
 							<div class="s7-3-2">
-								<p>Thông tin của bạn đã được gửi thành công.<br>Chúng tôi sẽ liên hệ tư vấn trong thời
-									gian sớm nhất.</p>
+								<h3>Thông tin của bạn đã được gửi thành công.<br>Chúng tôi sẽ
+									liên hệ tư vấn trong thời
+									gian sớm nhất.</h3>
+
 							</div>
 						</div>
 					</div>
@@ -1497,17 +1499,15 @@ M10.0035 214.783C10.7575 214.783 11.635 214.88 12.636 215.075C13.65 215.27 14.39
 						console.log('✅ Response Status:', response.status);
 						debugLog('Step 2 ✅: Request completed successfully');
 
-						// 3. Ẩn loading và hiện lại button
+						// 3. Ẩn loading
 						hideLoading();
 
-						// 4. Hiển thị thông báo thành công với SweetAlert2
-						swal('Thành công', 'Chúng tôi đã nhận được thông tin của bạn!', 'success');
+						// 4. Hiển thị thông báo thành công inline (ẩn form, hiện section "Cảm ơn bạn!")
+						const formSection = document.querySelector('.s7');
+						formSection.classList.add('success');
 
-						// 5. Reset form và ẩn debug area sau 5 giây
+						// 5. Reset form
 						form.reset();
-						setTimeout(() => {
-							debugArea.style.display = 'none';
-						}, 5000);
 
 						debugLog('🎉 FORM SUBMISSION SUCCESSFUL!');
 						console.log('═══════════════════════════════════════════');
